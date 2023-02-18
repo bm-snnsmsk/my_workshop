@@ -1,0 +1,36 @@
+0 - pyinstaller --onefile -w -i mp3.ico main.py    --> ile .exe dosyası oluştur
+
+1 - create a new script file using the script wizard    --> next
+2 - --> next
+3 - application name, 
+    version, 
+    publisher,   (kişi veya şirket adı)
+    web site      
+    --> next
+4 - --> next
+5 - application main executable file --> browse
+    add file (s) (veya programdaki uazantı .exe ile aynı dizinde değilse add folder yapılmalı)      
+    --> next
+6 - --> next
+7 - --> next
+8 - license file (varsa)
+    information file shown before installation (varsa)
+    information file shown after installation (varsa)
+    --> next
+9 - --> next
+10 - --> languages (setup hangi dilleri desteklesin)
+     --> next
+11 - custom compiler output folder (setup çıktısı nereye verilsin)
+     compiler output base file name (setup adı )
+     compiler setup icon file (setup iconu)
+     compiler password (setup şifresi)(şifre belirlenirse şayet dosya yüklemede şifre sorulacaktır)
+     --> next
+12 - --> next
+13 - --> Finish
+
+
+inno pop up
+1 - compile edilsin mi ? 
+2 - compile öncesi kodlar kayıt edilsin mi ?
+3 - compile değişikleri kaydedilsin mi ?
+ve setup dosyası hazır.....

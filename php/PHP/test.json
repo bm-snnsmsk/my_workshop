@@ -1,0 +1,31 @@
+{
+    "lesson" : "php" ,
+    "lessonDepartment" : "web",
+    "languages" : [
+        "php",
+        "nodejs",
+        "react js",
+        "angular"
+    ],
+    "person" : [
+    {
+        "name":"sinan",
+        "age":"37",
+        "bolum":"bm mühndisliği"
+    },
+    {
+        "name":"emine",
+        "age":"25",
+        "bolum":"çocuk gelişimi"
+    },
+    {
+        "name":"tubanur",
+        "age":"5",
+        "bolum":"okul öncesi"
+    },
+    {
+        "name":"baran",
+        "age":"2",
+        "bolum":"kreş"
+    }]
+}

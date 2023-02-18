@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame_show">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>30</y>
+      <width>401</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/icons/bir.jpg);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_aciklama">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>330</y>
+      <width>511</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuRenkler">
+    <property name="title">
+     <string>Renkler</string>
+    </property>
+    <addaction name="action_sari"/>
+    <addaction name="action_siyah"/>
+    <addaction name="action_kirmizi"/>
+   </widget>
+   <addaction name="menuRenkler"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::BottomToolBarArea|Qt::TopToolBarArea</set>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <property name="floatable">
+    <bool>true</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>true</bool>
+   </attribute>
+   <addaction name="action_sari"/>
+   <addaction name="action_yesil"/>
+   <addaction name="action_siyah"/>
+   <addaction name="action_kirmizi"/>
+   <addaction name="separator"/>
+   <addaction name="action_blue"/>
+   <addaction name="separator"/>
+   <addaction name="actionBeyaz"/>
+  </widget>
+  <action name="action_sari">
+   <property name="icon">
+    <iconset resource="icons/yellow.qrc">
+     <normaloff>:/icons/yellow.ico</normaloff>:/icons/yellow.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Sarı</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+Y</string>
+   </property>
+  </action>
+  <action name="actionBeyaz">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons/white.qrc">
+     <normaloff>:/icons/white.ico</normaloff>:/icons/white.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Beyaz</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+W</string>
+   </property>
+  </action>
+  <action name="action_yesil">
+   <property name="icon">
+    <iconset resource="icons/green.qrc">
+     <normaloff>:/icons/green.ico</normaloff>:/icons/green.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Yeşil</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+G</string>
+   </property>
+  </action>
+  <action name="action_siyah">
+   <property name="icon">
+    <iconset resource="icons/black.qrc">
+     <normaloff>:/icons/black.ico</normaloff>:/icons/black.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Siyah</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+B</string>
+   </property>
+  </action>
+  <action name="action_kirmizi">
+   <property name="icon">
+    <iconset resource="icons/red.qrc">
+     <normaloff>:/icons/red.ico</normaloff>:/icons/red.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Kırmızı</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+R</string>
+   </property>
+  </action>
+  <action name="action_blue">
+   <property name="icon">
+    <iconset resource="icons/blue.qrc">
+     <normaloff>:/icons/blue.ico</normaloff>:/icons/blue.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Blue</string>
+   </property>
+   <property name="toolTip">
+    <string>mavi enk</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+B</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="icons/black.qrc"/>
+  <include location="icons/green.qrc"/>
+  <include location="icons/bir.qrc"/>
+  <include location="icons/white.qrc"/>
+  <include location="icons/red.qrc"/>
+  <include location="icons/blue.qrc"/>
+  <include location="icons/yellow.qrc"/>
+ </resources>
+ <connections/>
+</ui>

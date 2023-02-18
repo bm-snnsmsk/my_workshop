@@ -1,0 +1,27 @@
+ctrl + b  // panel kapatma / açma
+ctrl + p  // search alanı
+ctrl + shift + p  // ayarlar alanı
+ctrl + p  // search alanındayken > ayarlar
+ctrl + w  // açık dosyayı kapatmak
+ctrl + tab // açık dosyalar arasında ileri gezinti yapmak
+ctrl + shift + tab // açık dosyalar arasında geri gezinti yapmak
+alt + click // çoklu imleç
+alt + shift + click // çoklu imleç
+ctrl + ö // satırı yorum yapma
+windows + sağ_ok // seçili öğeyi ekran boyutuna göre tam ikiye böler ve sağa yaslar>
+windows + sol_ok // seçili öğeyi ekran boyutuna göre tam ikiye böler ve sola yaslar
+
+
+ctrl + d // aynı ifadeleri tek tek seçer
+file/references/keyboard shortcuts  // arama-değiştirme
+bir veya birkaç satırı seç > alt+ok ile aşağı yukarı taşı
+alt + shift + aşağı // seçili satır kopyalaması
+ctrl + enter kelimeleri bozmadan alt satıra geçiş yapar
+shift(basılı iken) + yön //seçim yapar 
+alt + yön // satırı aşarğı veya yukarı taşır
+ctrl + sağ/sol // kelime kelime geçiş yapar
+ctrl + L // mevcut satırı seçer
+
+ayarlar > configures snippet > html / js / php ...  (json formatında kısayol koşarı oluşrur)
+çağırma  =  ss1 + tab
+ayarlar da font-family de monospace olmasına dikkat edilmeli her kaarakter aynı boyutta olacaktır . A aynı boyut kaplayacaktır

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>offcanvas</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+
+
+    </style>
+</head>
+<body>
+
+ 
+
+  
+  <div class="container my-5 border border-5 border-warning p-3 ">
+    <div class="row" >
+    <div class="col border border-3 p-3" >
+
+
+      <button type="button" class="btn btn-info" data-bs-toggle="offcanvas" data-bs-target="#offcanvas">offcanvas aç</button>
+
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          Content for the offcanvas goes here. You can place just about any Bootstrap component or custom elements here.
+
+          <img src="images/2.jpg" class="img-fluid" alt="">
+        </div>
+      </div>
+
+
+  
+        </div> 
+      </div>
+ </div>
+
+  
+  
+ <div class="container my-5 border border-5 border-warning p-3 ">
+  <div class="row" >
+  <div class="col border border-3 p-3" >
+
+
+    <button type="button" class="btn btn-info" data-bs-toggle="offcanvas" data-bs-target="#offcanvas2">offcanvas-end aç</button>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas2" aria-labelledby="offcanvasLabel" data-bs-scroll="true" data-bs-backdrop="false" data-bs-keyboard="false">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quis blanditiis, similique expedita, sint, hic modi aliquam ad inventore cum alias incidunt? Commodi voluptatum voluptatem suscipit autem iure, eos alias.
+      Illo, incidunt? Magnam debitis ex sed impedit iusto aut repellendus in praesentium, ipsum nihil porro labore fuga ea beatae corrupti, quidem soluta repellat consequuntur laboriosam et. Dicta deserunt repellendus est.
+      Eos vitae atque dolorum repellat exercitationem aspernatur, aliquid dignissimos ratione delectus aperiam id molestias aliquam iste saepe vel dolorem qui, fugit consequatur fuga repudiandae ipsa? Veritatis totam fuga nisi at!
+      Eveniet similique eum veniam ex facere, dignissimos, porro vitae fuga natus aliquam aut accusantium! Doloremque vero nobis voluptas id, odit, provident ex, consequuntur corporis magni reprehenderit illo laborum aut distinctio.
+      Iure eum molestiae fugiat, quos doloribus nulla consequatur perferendis. Esse, deserunt quaerat! Labore atque dolor doloribus, repellat at aperiam aliquam architecto, voluptate omnis dolorum debitis necessitatibus nostrum numquam, veniam ut.
+
+        <img src="images/2.jpg" class="img-fluid" alt="">
+      </div>
+    </div>
+
+  
+
+      </div> 
+    </div>
+</div>
+
+
+
+<div class="container my-5 border border-5 border-warning p-3 ">
+  <div class="row" >
+  <div class="col border border-3 p-3" >
+
+
+    <button type="button" class="btn btn-info" data-bs-toggle="offcanvas" data-bs-target="#offcanvas3">offcanvas hata verme aç</button>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas3" aria-labelledby="offcanvasLabel" data-bs-scroll="true" data-bs-backdrop="false" data-bs-keyboard="false">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+
+
+        <div class="alert alert-warning">
+          hatalı giriş
+        </div>
+        <img src="images/2.jpg" class="img-fluid" alt="">
+      </div>
+    </div>
+
+  
+
+      </div> 
+    </div>
+</div>
+
+
+
+
+
+
+    <script src="javascript/main.js"></script>
+    <script src="javascript/bootstrap.bundle.min.js"></script>
+    <script src="javascript/bootstrap.bundle.min.js.map"></script>
+
+    <script>
+
+var myOffcanvas = document.querySelector('#offcanvas') ;
+    var bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas,
+    {
+      keyboard:false
+    })
+
+
+    var myOffcanvas2 = document.querySelector('#offcanvas2') ;
+    myOffcanvas2.show();
+    </script>
+
+</body>
+</html>

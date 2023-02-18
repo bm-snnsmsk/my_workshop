@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <title>FetchAPI</title>
+    </head>
+    <body>
+        
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td id="isim">...</td>
+                <td id="serverName">...</td>
+                <td id="serverIP">@...</td>
+              </tr>
+
+            </tbody>
+          </table>
+
+
+          <h1><a href="https://jsonplaceholder.typicode.com/">placeholder.com</a>'dan bir örnek</h1>
+          <ul class="list-group" id="userlist">
+
+          </ul>
+
+
+        <script>
+            let name = document.querySelector("#isim") ;
+            let servername = document.querySelector("#serverName") ;
+            let serverIP = document.querySelector("#serverIP") ;
+
+            fetch("data/settings.json").then(response => {
+                return response.json() // cevabı jsona dönüştür
+            }).then(responseJSON => {
+
+                // console yazdırdım
+                console.log(responseJSON) ;
+                console.log("username : "+responseJSON.username) ;
+                console.log("password : "+responseJSON.password) ;
+                console.log("serverIP : "+responseJSON.serverIP) ;
+                console.log("serverName : "+responseJSON.serverName) ;
+                console.log("IDs : "+responseJSON.IDs) ;
+                console.log("IDs[3] : "+responseJSON.IDs[3]) ;
+
+                // html'e yazdırma
+                name.innerHTML = responseJSON.username ;
+                servername.innerHTML = responseJSON.serverName ;
+                serverIP.innerHTML = responseJSON.serverIP ;
+
+
+            })
+
+
+            let userlist = document.querySelector("#userlist") ;
+// https://jsonplaceholder.typicode.com/ sayfasındaki örnek
+
+            fetch('https://jsonplaceholder.typicode.com/comments')
+  .then(response => response.json())
+  .then(json => {
+    json.forEach((element, index) => {
+        let lidom = document.createElement("li") ;
+        if(index % 2 == 0){
+            lidom.classList.add("list-group-item-dark") ;
+        }else{
+            lidom.classList.add("list-group-item-info") ;
+        }
+        lidom.innerHTML = index+1 +" - "+ element.email ; 
+        userlist.appendChild(lidom) ;
+    });
+  })
+
+        </script>
+    </body>
+</html>

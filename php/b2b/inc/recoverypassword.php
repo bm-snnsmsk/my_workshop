@@ -1,0 +1,72 @@
+<?php 
+## maile gelen mesaja tıklandıktan sonra yönlendirilecek olan password yenileme sayfası
+require_once '../system/function.php';
+
+if( @$_SESSION['login'] == @sha1(md5(IP().$bcode)) ){
+    go(site);
+}
+
+if($_POST){
+
+   
+    $code     = post('code');
+    $bmail    = post('email');
+    $pass1    = post('password1');
+    $pass2    = post('password2');
+    $criypto  = sha1(md5($pass1));
+
+    if(!$pass1 || !$pass2){
+        echo 'empty';
+    }else{
+
+        $row = $db->prepare("SELECT * FROM bayiler WHERE sifirlamakodu=:k AND bayimail=:m");
+        $row->execute([':k' => $code,':m' => $bmail]);
+        if($row->rowCount()){
+
+            $up = $db->prepare("UPDATE bayiler SET 
+            
+            sifirlamakodu=:s, ## sıfırlama kodunun içi boşaltıldı. dolayısıyla sıfırlama kodu ile bir defa şifre değiştirilebilsin diye
+            bayisifre    =:ss
+            
+            WHERE bayimail=:k AND sifirlamakodu=:m");
+
+            $up->execute([':s' => '',':ss' => $criypto,':k'=>$bmail,':m'=>$code]);
+
+            require_once 'class.phpmailer.php';
+            require_once 'class.smtp.php';
+
+            $mail = new PHPMailer();
+            $mail->Host       = $arow->smtphost;
+            $mail->Port       = $arow->smtpport;
+            $mail->SMTPSecure = $arow->smtpsec;
+            $mail->Username   = $arow->smtpmail;
+            $mail->Password   = $arow->smtpsifre;
+            $mail->SMTPAuth   = true;
+            $mail->IsSMTP();
+            $mail->AddAddress($bmail); #### mesaj kişiye gidecek
+
+            $mail->From       = $arow->smtpmail;
+            $mail->FromName   = "Yavuz B2B | Şifre Sıfırlama";
+            $mail->CharSet    = 'UTF-8';
+            $mail->Subject    = "Şifreniz başarıyla sıfırlandı";
+            $mailcontent      = "
+            <p>Şifreniz başarıyla sıfırlandı, bu işlemi siz yapmadıysanız lütfen bizimle iletişime geçiniz...</p>
+            <p><b>İletişim linki :</b>".site."/contact-us</p>
+            ";
+
+            $mail->MsgHTML($mailcontent);
+            if($mail->Send()){
+                echo 'ok';
+            }
+            
+
+        }else{
+            echo 'error';
+        }
+
+    }
+
+}
+
+
+?>

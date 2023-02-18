@@ -1,0 +1,8 @@
+{
+    "username":"sinan",
+    "password":1234,
+    "serverIP":"127.0.0.1",
+    "serverName":"kodluyoruz.org",
+    "isAuth":true,
+    "IDs":[11, 22, 33, 44, 55]
+}

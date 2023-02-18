@@ -1,0 +1,11 @@
+emmet.io
+docs.emmet.io
+picsum.photos
+https://picsum.photos/600/300
+https://developer.mozilla.org/
+mdn references // tag üzerindeyken açılır 
+https://htmlreference.io/
+https://unsplash.com/     //  ücretsiz görseller
+https://sweetalert2.github.io/
+
+

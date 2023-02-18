@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+           
+
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+    </style>
+    
+</head>
+<body>
+ <div class="container">
+    <canvas id="canvas" width="600" height="400"></canvas>     
+    
+ </div>
+
+ <div class="container">
+    <p id="demo"></p>
+    
+ </div>
+
+
+
+
+
+<script>
+let output = document.querySelector('#demo');
+let canvas = document.querySelector('#canvas');
+let ctx = canvas.getContext('2d');
+let cansW = canvas.width  ;
+let cansH = canvas.height ;
+
+let score = 0 ;
+
+
+
+
+let block = {
+    blockX : cansW/2-100,
+    blockY : cansH/2-100,
+    blockW : 200,
+    blockH : 100,
+    blockColor : "rgba(225, 214, 198)",
+    drawBlock : function(){
+        ctx.beginPath();
+        ctx.fillStyle= this.blockColor ;
+        ctx.fillRect(this.blockX,this.blockY,this.blockW,this.blockH) ;
+    }
+}
+let enemy = {
+    enemyX : 0,
+    enemyY : 0,
+    enemyColor : "rgba(200, 214,255)",
+    enemyRadius : 30,
+    createEnemy : function(){
+            ctx.beginPath();
+            ctx.fillStyle= this.enemyColor;
+            ctx.arc(this.enemyX,this.enemyY,this.enemyRadius,0, Math.PI * 2, false) ;
+            ctx.fill();
+    }
+}
+
+canvas.addEventListener('mousemove',mouseMove22,true);
+function mouseMove22(e){
+
+    dx = block.blockX - enemy.enemyX ;
+    dy = block.blockY - enemy.enemyY ;
+    hypo = Math.sqrt(dx*dx + dy*dy) ;
+    hypo <= enemy.enemyRadius; 
+
+
+    enemy.enemyX = e.pageX  ;
+    enemy.enemyY = e.pageY ;
+    output.innerHTML = 
+    "<br/>enemy.enemyX + enemy.enemyRadius : "+(enemy.enemyX + enemy.enemyRadius)+"<br/>block.blockX : "+block.blockX+
+    "<br/><br/>enemy.enemyX - enemy.enemyRadius : "+(enemy.enemyX - enemy.enemyRadius)+"<br/>block.blockX + block.blockW: "+(block.blockX + block.blockW)+
+    "<br/><br/>enemy.enemyY + enemy.enemyRadius : "+(enemy.enemyY + enemy.enemyRadius)+"<br/>block.blockY : "+block.blockY+
+    "<br/><br/>enemy.enemyY - enemy.enemyRadius : "+(enemy.enemyY - enemy.enemyRadius)+"<br/>block.blockY + block.blockH: "+(block.blockY + block.blockH)+
+    "<br/><br/>hypo : "+(hypo) ;
+    canvas.style.cursor="none";
+}
+function drawCanvas(){
+    ctx.beginPath();
+    ctx.fillStyle="rgba(24,198,233)";
+    ctx.fillRect(0,0,cansW,cansH) ;
+
+}
+guncelle();
+function guncelle(){
+    drawCanvas() ;
+    block.drawBlock() ; 
+    enemy.createEnemy();
+
+    dx = block.blockX - enemy.enemyX ;
+    dy = block.blockY - enemy.enemyY ;
+    hypo = Math.sqrt(dx*dx + dy*dy) ;
+    hypo <= enemy.enemyRadius; 
+
+    if(enemy.enemyX + enemy.enemyRadius >= block.blockX && enemy.enemyX - enemy.enemyRadius <= block.blockX + block.blockW && enemy.enemyY + enemy.enemyRadius >= block.blockY && enemy.enemyY - enemy.enemyRadius <= block.blockY + block.blockH){
+        enemy.enemyColor = "red" ;
+    }else{
+        enemy.enemyColor = "rgba(200, 214,255)" ;
+    }
+
+
+    afr = requestAnimationFrame(guncelle) ;
+ 
+}
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

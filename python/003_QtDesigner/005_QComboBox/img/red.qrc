@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="img">
+    <file>red.ico</file>
+  </qresource>
+</RCC>

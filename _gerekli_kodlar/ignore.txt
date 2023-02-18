@@ -1,0 +1,11 @@
+versiyonlamasını istemedğimiz dosyalar
+.gitignore
+amaç gizlilik
+proje public(yüksek ihtimal) olacağı için gereksiz paylaşım olmaması için
+boş yere ter işgal etmesi...
+
+
+# görseller
+# videolar
+# logolar
+# paket yönticisi ile kurulmuş dosyalar

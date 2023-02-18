@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popover</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+ 
+
+  
+  <div class="container-fluid my-5">
+    <div class="row border border-dark p-5">
+      <div class="col">
+
+        <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+
+
+        <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Dismissible popover" data-bs-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
+
+       
+</div>
+    </div>
+  </div>
+
+
+
+
+    <script src="javascript/main.js"></script>
+    <script src="javascript/bootstrap.bundle.min.js"></script>
+    <script src="javascript/bootstrap.bundle.min.js.map"></script>
+
+    <script>
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+  var popover = new bootstrap.Popover(document.querySelector('.example-popover'), {
+  container: 'body'  // popover içerik 
+})
+
+var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
+  trigger: 'focus'  // hover click(default)
+  // delay : {"show" : 100, "hide":100},
+  // html:true, diyerek içeriğe html tagları yazılabilir
+  // placement : "top" ,
+  // title :"başlık",
+  // offset:{x,y}
+})
+
+
+
+})
+    </script>
+
+</body>
+</html>

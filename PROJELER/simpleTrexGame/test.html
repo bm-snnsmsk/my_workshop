@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr-TR" onclick="jump()">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            margin: 0 auto;
+            width: 500px;
+            height: 200px;
+            background-color: #6200ff;
+            position: relative;
+        }
+        #bir{
+            width: 20px;
+            height: 50px;
+            background-color: red;
+            position: relative;
+            top: 150px;
+            z-index: 5;
+        }
+        .zipla{            
+            animation:zipla 2s ;
+        }
+        #iki{
+            width: 20px;
+            height: 20px;
+            background-color: yellow;
+            position: relative;
+            top: 130px;
+            left: 480px;
+            animation:game 1s infinite linear;
+        }
+        @keyframes zipla{
+            0%{top:150px}
+            30%{top:100px}
+            70%{top:100px}
+            100%{top:150px}
+        }
+        @keyframes game{
+            0%{left:480px}
+            100%{left:-40px}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="bir">
+            <div class="bir-bir"></div>
+        </div>
+        <div id="iki"></div>
+    </div>
+
+    <div class="demo"></div>
+
+
+    <script>
+        let demo = document.querySelector('.demo');
+        let bir = document.querySelector('#bir');
+        let iki = document.querySelector('#iki');
+        let score = 0 ;
+
+    
+
+
+        function jump(){
+            if(!bir.classList.contains("zipla")){
+                bir.classList.add("zipla");
+            }
+            setTimeout(()=>{
+                bir.classList.remove('zipla')
+            },500) ;
+        }
+
+        
+        setInterval(() => {
+            let birTop = parseInt(getComputedStyle(bir).getPropertyValue('top'));
+            let ikiLeft = parseInt(getComputedStyle(iki).getPropertyValue('left'));
+            if(ikiLeft < 20 && ikiLeft > 0 && birTop >= 130){
+                //iki.style.backgroundColor="white";
+                iki.style.animation = 'none' ;
+                iki.style.display = 'none' ;
+                alert("game over!") ;
+            }
+
+        },10) ;
+
+        setInterval(() => {
+            let birTop = parseInt(getComputedStyle(bir).getPropertyValue('top'));
+            let ikiLeft = parseInt(getComputedStyle(iki).getPropertyValue('left'));
+            let ikiTop = parseInt(getComputedStyle(iki).getPropertyValue('top'));
+            demo.innerHTML = "top : " + birTop + " - " + ikiTop +"<br/>left : "+ ikiLeft +'<br/><br/>' ;
+        },1) ;
+
+    </script>
+</body>
+</html>

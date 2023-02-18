@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position-relative & position-absolute</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+ 
+
+ 
+
+  
+
+  <div class="container-fluid border mb-4 bg-secondary mh-100 my-5" style="height: 200px ;">
+    <div class="row">
+      <h3>Dikkat Box-3, Box-2 varmış gibi konumlandı</h3>
+      <div class="col-12 py-4 d-flex">
+
+        <div class="box me-2 border border-3">Box-1</div>
+        <div class="box me-2 border border-3 position-relative" style="top:50px; left:300px  ">Box-2</br>position-relative; top:50px; left:300px </div>
+        <div class="box me-2 border border-3">Box-3</div>
+         
+     
+
+      </div>
+    </div>
+    
+  </div>
+
+
+  
+  <div class="container-fluid border mb-4 bg-secondary mh-100 my-5" style="height: 200px ;">
+    <div class="row">
+      <h3>Dikkat Box-3, Box-2 yokmuş gibi konumlandı</h3>
+      <div class="col-12 py-4 d-flex">
+
+        <div class="box2 me-2 border border-3">Box-1</div>
+        <div class="box2 me-2 border border-3 position-absolute" style="top:50px; left:600px">Box-2</br>position-absolute; top:50px; left:600px</div>
+        <div class="box2 me-2 border border-3">Box-3</div>
+         
+     
+
+      </div>
+    </div>
+    
+  </div>
+
+
+  <div class="container-fluid border mb-4 bg-secondary position-relative" style="height: 400px ; ">
+    <div class="row">
+      <h3>parent(hangi parent içinde olması istnirse o parent relative yapılmalı. Bu örnekte en dıştaki parent relative yapıldı) element position:relative</h3>
+      <div class="col-12 d-flex py-5 border border-warning">
+
+        <div class="box3 me-2 border border-3">Box-1</div>
+        <div class="box3 border border-3 position-absolute" style="bottom:-50px; right:0">Box-2</br>position-absolute; bottom:-50px; right:0</div>
+        <div class="box3 me-2 border border-3">Box-3</div>
+         
+     
+
+      </div>
+    </div>
+    
+  </div>
+
+
+
+
+
+  
+
+
+    <script src="javascript/main.js"></script>
+    <script src="javascript/bootstrap.bundle.min.js"></script>
+    <script src="javascript/bootstrap.bundle.min.js.map"></script>
+</body>
+</html>

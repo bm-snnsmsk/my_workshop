@@ -1,0 +1,16 @@
+txt = " hello there. my name is sinan"
+
+print(txt.upper())
+print(txt.lower())
+print(txt.title())
+print(txt.capitalize())
+print(txt.strip())
+print(txt.split())
+message = txt.split()
+print("--".join(message))
+print(txt.find("sinan"))
+print(txt.startswith("H"))
+print(txt.endswith("n"))
+print(txt.replace("n","N").replace("s","S").replace("e","E"))
+print(txt.center(100))
+print(txt.center(100,"*"))

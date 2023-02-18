@@ -1,0 +1,6 @@
+# Options -Indexes 
+# ilgili klasor içeriğini yasaklar ama klasor/name.ext şeklinde mevcut dosya yazılırsa gene erişilebilir
+################
+deny from all  
+# ilgili klasor içeriğini yasaklar ve  klasor/name.ext şeklinde mevcut dosya yazılırsa bile erişimi yasaklar 
+

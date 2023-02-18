@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>books.ico</file>
+    <file>cancel.ico</file>
+    <file>close.ico</file>
+    <file>computer.ico</file>
+    <file>database.ico</file>
+    <file>edit.ico</file>
+    <file>folder.ico</file>
+    <file>green.ico</file>
+    <file>hello.ico</file>
+  </qresource>
+</RCC>

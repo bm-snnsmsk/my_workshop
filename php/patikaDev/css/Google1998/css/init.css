@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0%;
+    list-style-type: none;
+
+}
+.container{
+    margin: 0 auto;
+    width: 80%;
+}
+.logo{
+    text-align: center;
+    margin-top: 10px;
+}
+.formAlani{
+    background-color: #EEEEEE;
+    text-align: center;
+    padding-top: 5px ;
+    padding-bottom: 10px ;
+}
+.btnq{
+    border-radius: 5px;
+}
+.copyRightAlani{
+   
+    text-align: center;
+    clear: both;
+    font-size: 14px;
+}
+
+.altAlan{
+  margin-top: 2px;
+   text-align: center;
+    float: left;
+    min-height: 100px;
+    margin-bottom: 20px;
+}
+.ilkAlan{
+    width: 35%;
+    background-color: #7EE5DA;
+    margin-right: 2px;
+
+ 
+}
+.ortaAlan{
+    width: calc(30% - 4px);
+    background-color: #70CCC2;
+    margin-right: 2px;
+}
+.sonAlan{
+    width: 35%;
+    background-color: #62B3AA;
+}
+.altArama{
+    width: 80%;
+    
+}
+.altAlan > ul {
+    padding: 10px;
+}

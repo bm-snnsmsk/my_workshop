@@ -1,0 +1,12 @@
+.myDiv{
+    border: 5px outset red;
+    background-color: blueviolet;
+    text-align: center;
+}
+  
+.myDiv2{
+    border: 5px outset green;
+    background-color: rgb(180, 3, 62);
+    text-align: center;
+}
+  

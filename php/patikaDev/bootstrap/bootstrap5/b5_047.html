@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validation</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+
+
+    </style>
+</head>
+<body>
+
+  
+<!--   <div class="container ">
+    <div class="row mt-5" >
+    <div class="col border border-3 p-3" >
+
+      <form action="" class="dogrulama1 was-validated">
+
+        <div class="row mb-3">
+          <label for="validationName1" class="form-label col-xl-2">Adınız</label>
+          <div class="col-xl-10">
+            <input type="text" class="form-control" id="validationName1" name="validationName1" required>
+            <div class="invalid-feedback">Lütfen Adınızı girin</div>
+            <div class="valid-feedback">Her şey yolunda</div>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label for="validationLastname1" class="form-label col-xl-2">Soyadınız</label>
+          <div class="col-xl-10">
+            <input type="text" class="form-control" id="validationLastname1" name="validationLastname1" required>
+            <div class="invalid-feedback">Lütfen Soyadınızı girin</div>
+            <div class="valid-feedback">Her şey yolunda</div>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label for="validationUsername1" class="form-label col-xl-2">Kullanıcı Adı</label>
+          <div class="col-xl-10">
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="IGroup">@</span>
+              <input type="text" class="form-control" id="validationUsername1" name="validationUsername1" required>
+              <div class="invalid-feedback">Lütfen kullanıcıadınızı girin</div>
+              <div class="valid-feedback">Her şey yolunda</div>
+             </div>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label for="validationCity1" class="form-label col-xl-2">Şehir</label>
+          <div class="col-xl-10">
+            <select name="validationCity1" id="validationCity1" class="form-select" required>
+              <option value="" selected disabled>Seç...</option>
+              <option value="1">Silopi</option>
+              <option value="2">Cizre</option>
+              <option value="3">İdil</option>
+              <option value="4">Beytüşşebap</option>
+            </select>
+            <div class="invalid-feedback">Lütfen Şehir girin</div>
+            <div class="valid-feedback">Her şey yolunda</div>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+      <div class="offset-xl-2">
+        <div class="form-check">
+          <input type="checkbox" id="agreeCond1" name="agreeCond1" class="form-check-input" required>
+          <label for="agreeCond1" class="form-check-label">Şartlarınız kontrol edin...</label>
+          <div class="invalid-feedback">Lütfen şartları kabul edin</div>
+          <div class="valid-feedback">Her şey yolunda</div>
+        </div>
+      </div>
+        </div>
+
+        <div class="row">
+          <div class="offset-xl-2 offset-xl-10">
+           <button class="btn btn-info d-block w-100" type="submit">Gönder</button>
+            </div></div>
+
+      </form>
+     
+
+
+
+      </div> 
+    </div>
+</div>
+ -->
+
+
+ 
+<div class="container ">
+  <div class="row mt-5" >
+  <div class="col border border-3 p-3" >
+
+    <form class="dogrulama " id="formDogrulama" novalidate>
+
+      <div class="row mb-3">
+        <label for="validationName" class="form-label col-xl-2">Adınız</label>
+        <div class="col-xl-10">
+          <input type="text" class="form-control" id="validationName" name="validationName" required>
+          <div class="invalid-feedback">Lütfen Adınızı girin</div>
+          <div class="valid-feedback">Her şey yolunda</div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <label for="validationLastname" class="form-label col-xl-2">Soyadınız</label>
+        <div class="col-xl-10">
+          <input type="text" class="form-control" id="validationLastname" name="validationLastname" required>
+          <div class="invalid-feedback">Lütfen Soyadınızı girin</div>
+          <div class="valid-feedback">Her şey yolunda</div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <label for="validationUsername" class="form-label col-xl-2">Kullanıcı Adı</label>
+        <div class="col-xl-10">
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="IGroup">@</span>
+            <input type="text" class="form-control" id="validationUsername" name="validationUsername" required>
+            <div class="invalid-feedback">Lütfen kullanıcıadınızı girin</div>
+            <div class="valid-feedback">Her şey yolunda</div>
+           </div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <label for="validationCity" class="form-label col-xl-2">Şehir</label>
+        <div class="col-xl-10">
+          <select name="validationCity" id="validationCity" class="form-select" required>
+            <option value="" selected disabled>Seç...</option>
+            <option value="1">Silopi</option>
+            <option value="2">Cizre</option>
+            <option value="3">İdil</option>
+            <option value="4">Beytüşşebap</option>
+          </select>
+          <div class="invalid-feedback">Lütfen Şehir girin</div>
+          <div class="valid-feedback">Her şey yolunda</div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+    <div class="offset-xl-2">
+      <div class="form-check">
+        <input type="checkbox" id="agreeCond" name="agreeCond" class="form-check-input" required>
+        <label for="agreeCond" class="form-check-label">Şartlarınız kontrol edin...</label>
+        <div class="invalid-feedback">Lütfen şartları kabul edin</div>
+        <div class="valid-feedback">Her şey yolunda</div>
+      </div>
+    </div>
+      </div>
+
+      <div class="row">
+        <div class="offset-xl-2 offset-xl-10">
+         <button class="btn btn-info d-block w-100" type="submit">Gönder</button>
+          </div></div>
+
+    </form>
+   
+
+
+
+    </div> 
+  </div>
+</div>
+
+
+
+
+
+
+
+    <script src="javascript/main.js"></script>
+    <script src="javascript/bootstrap.bundle.min.js"></script>
+    <script src="javascript/bootstrap.bundle.min.js.map"></script>
+
+    <script>
+
+/* (function(){
+  'use strict'
+  var myForms = document.querySelectorAll(".dogrulama");
+  Array.prototype.slice.call(myForms).forEach(function (form){
+    form.addEventListener('submit',function(e){
+      if(!myForms.checkValidity()){
+          e.preventDefault();
+          e.stopPropagation(); // doğrulama yaoılana kadar sunucuya gönderme
+      }
+      myForms.classList.add("was-validate");
+
+    },false);
+  });
+})(); */
+
+
+(function(){
+  'use strict'
+  var myForm = document.querySelector("#formDogrulama");
+
+  myForm.addEventListener('submit',function(e){
+      if(!myForm.checkValidity()){
+       
+          e.preventDefault();
+          e.stopPropagation(); // doğrulama yaoılana kadar sunucuya gönderme
+       //   alert("form verilerinizde hatalar var. ! Lütfen düzeltin");
+      }
+        myForm.classList.add("was-validated");
+     // alert("form verileriniz gönderildi...");
+     
+  
+     
+
+    },false);
+
+})();
+
+
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+

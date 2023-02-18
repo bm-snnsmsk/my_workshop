@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>white.qrc</file>
+    <file>white.ico</file>
+  </qresource>
+</RCC>

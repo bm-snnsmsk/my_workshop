@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Javascript Test</title>
+    <style>
+       div#demo{
+        width:100%; 
+        min-height: 200px;
+        padding:10px; 
+        background-color: rgb(243, 223, 198);
+    }
+    .demo{
+        color: blue;
+        font-size: 28px;
+        font-weight: 900;
+    }
+    </style>
+</head>
+<body>
+    <input type="text" id="inp">
+    <button onclick="yazdir()">Yazdir</button>
+    <button onclick="temizle()">Temizle</button>
+    <button onclick="liEkle()">liste ekle</button>
+    <button onclick="classEkle()">class ekle</button>
+    <button onclick="classSil()">class Sil</button>
+    <button onclick="classToggle()">class togge</button>
+    <button onclick="testTernary()">ternary test</button>
+    <button onclick="f()">Gönder</button>
+    <div id="demo" class="">
+      deneme text
+    </div>
+
+<!--     <ul class="liste" id="lst">
+        <li>eleman1</li>
+        <li>eleman2</li>
+        <li>eleman3</li>
+        <li>eleman4</li>
+        <li>eleman5</li>
+        <li>eleman6</li>
+        <li>eleman7</li>
+        <li>eleman8</li>
+        <li>eleman9</li>
+        <li>eleman10</li>
+    </ul> -->
+
+<!-- 
+    <form id="frm">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        
+        <label for="color">Choose a color</label>
+    <select name="colors" id="select">
+      <option value="red">RED</option>
+      <option value="blue">BLUE</option>
+      <option value="purple">PURPLE</option>
+      <option value="orange">ORANGE</option>
+      <option value="pink">PINK</option>
+    </select>
+
+
+        <button type="submit" class="btn btn-primary" id="gonder">Submit</button>
+      </form> -->
+
+    <!--  <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <li>item1</li>
+            </div>
+            <div class="col-4">
+                <span>X</span>               
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-8">
+                <li>item1</li>
+            </div>
+            <div class="col-4">
+                <span>X</span>               
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-8">
+                <li>item1</li>
+            </div>
+            <div class="col-4">
+                <span>X</span>               
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-8">
+                <li>item1</li>
+            </div>
+            <div class="col-4">
+                <span>X</span>               
+            </div>
+          </div>
+     </div>
+
+ -->
+
+
+
+    <script>
+
+// ############## event START ##########################
+
+// ############## event END ############################
+
+        let d = document.getElementById("demo") ;
+        let gelenVeri = document.getElementById("inp") ;
+        let liste = document.querySelector("#lst") ;
+        let icerik = document.querySelector("#demo") ;
+        let slct = document.querySelector("#select") ;
+        let frm = document.querySelector("#frm") ;
+        let name = "sinan " ;
+        let lastname = "şimşek" ;
+        let email = " bm.snnsmsk@gmail.com " ;
+        let url = "www.hesapla.com" ;
+        let language = "Java dili" ;
+        let result ;
+
+        function temizle(){
+            d.innerHTML = "";
+            gelenVeri.value = "" ;
+            gelenVeri.focus() ; 
+        }
+        function yazdir(){
+
+            if( Number.isInteger(gelenVeri.value))
+            d.innerHTML = " sayı";
+            else
+            d.innerHTML = " sayı değil";
+
+        }
+
+        function liEkle(){
+            let li = document.createElement("li") ;
+            li.textContent = gelenVeri.value ;
+            liste.appendChild(li) ;
+            gelenVeri.value = "" ;
+            gelenVeri.focus() ; 
+        }
+
+        function classEkle(){
+            icerik.classList.add("demo") ;
+        }
+        function classSil(){
+            icerik.classList.remove("demo") ;
+        }
+        function classToggle(){
+            icerik.classList.toggle("demo") ;
+        }
+        function testTernary(){
+            let a = prompt("birdeğer gir ") ;
+            (a == 20) ? icerik.innerHTML = "20 sayısı girdin" : 
+            (a == 200) ? icerik.innerHTML = "200 sayısı girdin" :
+            icerik.innerHTML = "girdiğiniz değer ne  20 ne de 200 dür " ;
+        }
+
+        function f(){
+            let m = gelenVeri.value ;
+            let txt = "" ;
+            try{
+                for(let i = m.length - 1  ; i >= 0 ; i--){
+                txt += m[i] ; 
+            }
+            console.log(txt) ;
+            }catch(err){
+                console.log(err) ;
+            }
+          }
+        
+// d.innerHTML = valid() ;
+
+        //d.innerHTML = Math.round(Math.random()*10);
+        // d.innerHTML = typeof("25");
+        // d.innerHTML = Boolean(Symbol());
+        // d.innerHTML = Number.isNaN(NaN);
+       // let a = name.concat(lastname) ;
+        // d.innerHTML = "<mark>"+a.length+"</mark>" ;
+        // d.innerHTML = email.slice(email.search("@") + 1,email.indexOf(".com")) ;
+        // d.innerHTML = name.charAt(0).toUpperCase() + name.slice();
+       // d.innerHTML = language.replace("Java","JavaScript");
+      //  d.innerHTML = url.slice(url.indexOf(".")+1);  
+     // console.log(url) ;
+
+ /*     let uzunluk = document.getElementsByClassName("liste") ;
+     for(let i = 0 ; i < uzunluk.length ; i++ ){
+        uzunluk[i].style.color = "red" ;
+     }
+    
+ */
+
+/*     let deger = prompt("puan gir") ;
+
+if(deger >= 0 && deger <= 100){
+    if(deger <= 100 && deger > 89) 
+    icerik.innerHTML = "AA" ;
+    if(deger <= 89 && deger > 84) 
+    icerik.innerHTML = "BA" ;
+    if(deger <= 84 && deger > 79) 
+    icerik.innerHTML = "BB" ;
+    if(deger <= 79 && deger > 74) 
+    icerik.innerHTML = "CB" ;
+    if(deger <= 74 && deger > 69) 
+    icerik.innerHTML = "CC" ;
+    if(deger <= 69 && deger > 64) 
+    icerik.innerHTML = "CD" ;
+    if(deger <= 64 && deger > 59) 
+    icerik.innerHTML = "DD" ;
+    if(deger <= 59 && deger > 54) 
+    icerik.innerHTML = "DF" ;
+    if(deger <= 54 && deger > 0) 
+    icerik.innerHTML = "FF" ;
+}else{
+    icerik.innerHTML = "yanlış değer" ;
+} */
+
+// fat arrow function
+/* let a = () => {icerik.innerHTML = "fonksiyon deneme"} ;
+a();
+ */
+
+/*  function stringFormat(str) 
+  {
+    let part1 = str.slice(0, 3);
+    let part2 = str.slice(3);
+    return str = part1.toUpperCase() + part2;
+  }
+
+
+  icerik.innerHTML = stringFormat("sinan şimşek") ;
+ */
+
+/*  let a = (id,name) => {
+    return `${id} merhaba ${name}` ;
+ }
+
+ icerik.innerHTML = a(5,"sinan") ; */
+
+ // ############## event START ############################
+
+/* d.addEventListener("mouseover",function(){
+    this.style.backgroundColor ="red" ;
+});
+d.addEventListener("mouseleave",renk);
+
+function renk(){
+    this.style.backgroundColor = "blue"; 
+}
+
+d.addEventListener("copy",function(){
+    this.innerHTML ="içerik kopyalandı..." ;
+});
+
+
+frm.addEventListener("submit",function(){
+    alert("form gönderildi") ;
+});
+
+slct.addEventListener("change",function(e){
+    d.style.backgroundColor = e.target.value ; // = slct.value
+    event.preventDefault() ;
+});
+
+gelenVeri.addEventListener("input", function(e){
+    d.innerHTML = `${this.value} </br>Karakter sayısı : ${this.value.length}` ;
+}) ; */
+
+ // ############## event END ############################
+
+
+// ############## event START ##########################
+/* window.localStorage.setItem("isim","sinan"); 
+localStorage.getItem("isim") ;
+//incele > console > application > localStorage
+localStorage.removeItem("isim") ; // sadece belirtilen item'i silme
+//localStorage.clear(); // tüm itemları silme
+ */
+// ############## event END ############################
+
+/* let dizi = new Array(3,1,4,6,5) ; // 1 3 4 5 6
+
+
+function a(nums){
+    let arr =  nums.sort(function(a,b){
+    return a-b ;
+}) ;
+return arr[arr.length-2] ;
+}
+
+d.innerHTML = a(dizi) ;
+
+ */
+/*  function f(s){
+    let vowels = ['a', 'e', 'i', 'o', 'u'] ;
+    let nonVowels = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'] ;
+
+    let vw = [] ;
+    let nonvw = [] ;
+   
+    for(let i = 0 ; i < s.length ; i++){
+        if(vowels.includes(s[i])){
+            vw.push(s[i]) ;
+        }else if(nonVowels.includes(s[i])){
+            nonvw.push(s[i]) ;
+        }
+       
+    }
+    let result = "" ;
+    let newArr = vw.concat(nonvw);
+    for (let j = 0; j < newArr.length; j++) {
+       result += newArr[j] + "</br>" ;
+    }
+    return result ;
+ }
+ d.innerHTML = f("sinan simsek şç") ; */
+
+// const animals = ["cat" , "dog" , "bird", "horse"];
+  
+/* animals.forEach((value , index , array) => {
+  console.log('value: ', value );
+  console.log('value parametresinin aldığı index :', index );
+  console.log('array:' , array );
+});
+
+d.innerHTML = animals.forEach((value , index , array) => {
+  console.log('value: ', value );
+  console.log('value parametresinin aldığı index :', index );
+  console.log('array:' , array[index] );
+}); */
+
+// let newArr = animals.filter(eleman => eleman.length > 3) ; // bird, horse
+/* let newArr = animals.filter((eleman) => {  // yukardakine eşit
+    return eleman.length > 3 ;
+}) ;
+d.innerHTML = newArr ; // bird, horse */
+
+/* const maaslar = [ 1100, 13000, 2500, 4500, 1500, 25000, 2000 ] ;
+const yeniMaaslar = maaslar.map((e)=>{
+    if(e > 3000)
+        return e * 1.15;
+    else
+        return e * 1.25;
+});
+
+d.innerHTML = yeniMaaslar ;
+ */
+
+let obje = {
+    isim : "sinan",
+    soyisim : "şimşek",
+    yas : "36",
+    "1kg" : 26,
+    f : function(){
+        return `${this.isim[0].toUpperCase()}. ${this.soyisim}` ;
+    }
+}
+
+// d.innerHTML = obje["1kg"] ;
+// d.innerHTML = Object.keys(obje) // isim,soyisim,yas,1kg
+// d.innerHTML = Object.values(obje) // sinan,şimşek,36,26
+/* keys = Object.entries(obje) ;
+d.innerHTML = "" ;
+keys.forEach(i => {   
+    d.innerHTML +=  i + "<br/>";
+});
+keys = Object.keys(obje) ;
+d.innerHTML = "" ;
+keys.forEach(i => {   
+    d.innerHTML +=  i + "<br/>";
+});
+keys = Object.values(obje) ;
+d.innerHTML = "" ;
+keys.forEach(i => {   
+    d.innerHTML +=  i + "<br/>";
+});
+d.innerHTML = obje.f() ;
+ */
+
+/* let arr = [100,200,300,400,500,600] ;
+let [s1, s2, ...others] = arr ;
+function f(arr){
+    let result = "" ;
+    for(let i = 0 ; i < others.length ; i++){
+        result += others[i] + "<br/>" ;
+    }
+    return result ;
+}
+ */
+
+
+
+
+
+
+
+
+
+     </script>
+</body>
+</html>

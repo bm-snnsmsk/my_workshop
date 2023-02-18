@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>black.ico</file>
+  </qresource>
+</RCC>

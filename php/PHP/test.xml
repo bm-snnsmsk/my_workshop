@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<bookstore> 
+  
+    <book category="fantastic">
+        <title lang="en">Harry Potter</title>
+        <author>J.K Rowling</author>
+        <year>1999</year>
+        <price>30.75</price>
+    </book>
+    <book category="web">
+        <title lang="en">Learning XML</title>
+        <author>Erik T. Ray</author>
+        <year>2000</year>
+        <price>39.75</price>
+   </book>
+   <book category="fantastic">
+        <title lang="en">Yüzüklerin Efendisi</title>
+        <author>J. J. Tolken</author>
+        <year>1954</year>
+        <price>35.50</price>
+   </book>
+
+</bookstore>
+

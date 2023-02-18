@@ -1,0 +1,44 @@
+
+/* extra ölçüler için   */
+
+/* x-small   */
+@media (max-width:575.98px) {
+    body{
+        background-color: coral;
+    }
+}
+
+/* small   */
+@media (min-width:576px) {
+    body{
+        background-color: red;
+    }
+}
+
+/* medium   */
+@media (min-width:768px) {
+    body{
+        background-color: blue;
+    }
+}
+
+/* large   */
+@media (min-width:992px) {
+    body{
+        background-color: green;
+    }
+}
+
+/* x-large   */
+@media (min-width:1200px) {
+    body{
+        background-color: yellow;
+    }
+}
+
+/* xx-large   */
+@media (min-width:1400px) {
+    body{
+        background-color: blueviolet;
+    }
+}

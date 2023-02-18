@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="img">
+    <file>turnoff.ico</file>
+  </qresource>
+</RCC>

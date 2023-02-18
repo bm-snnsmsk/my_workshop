@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="img">
+    <file>maximize.ico</file>
+  </qresource>
+</RCC>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login uygulama</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+
+
+    </style>
+</head>
+<body>
+
+     
+
+
+
+
+ 
+<div class="container ">
+  <div class="row mt-5" >
+  <div class="col border border-3 p-3" >
+
+    <form class="dogrulama " id="formDogrulama" novalidate>
+
+
+   
+
+      <div class="row mb-3">
+        <label for="validationUsername" class="form-label col-xl-2">Kullanıcı Adı</label>
+        <div class="col-xl-10">
+         
+            <input type="text" class="form-control" id="validationUsername" name="validationUsername" required>
+            <div class="invalid-feedback" id="emptyUsername"></div>
+
+        </div>
+      </div>
+
+      
+      <div class="row mb-3">
+        <label for="validationEmail" class="form-label col-xl-2">e-posta</label>
+        <div class="col-xl-10">
+       
+            <input type="email" class="form-control" id="validationEmail" name="validationEmail" required>
+            <div class="invalid-feedback" id="emptyEmail">Lütfen epostanızı girin</div>
+           
+        
+        </div>
+      </div>
+
+
+      
+      <div class="row mb-3">
+        <label for="validationPass" class="form-label col-xl-2">şifre</label>
+        <div class="col-xl-10">
+        
+            <input type="password" class="form-control" id="validationPass" name="validationPass" required>
+            <div class="invalid-feedback" id="emptyPass">Lütfen şifre girin</div>
+          
+          
+        </div>
+      </div>
+
+     
+
+      <div class="row">
+        <div class="offset-xl-2 col-xl-10">
+         <button class="btn btn-info d-block w-100" type="submit">Gönder</button>
+          </div>
+        
+      </div>
+
+    </form>
+   
+
+
+
+    </div> 
+  </div>
+</div>
+
+
+
+
+
+
+
+    <script src="javascript/main.js"></script>
+    <script src="javascript/bootstrap.bundle.min.js"></script>
+    <script src="javascript/bootstrap.bundle.min.js.map"></script>
+
+    <script>
+
+
+
+(function(){
+  'use strict'
+  var username = document.querySelector("#validationUsername");
+  var email = document.querySelector("#validationEmail");
+  var pass = document.querySelector("#validationPass");
+  const spacePatt = /^\S*$/ ;
+
+  username.addEventListener('blur',controlUsername);
+  email.addEventListener('blur',controlEmail);
+  pass.addEventListener('blur',controlPass);
+
+
+
+
+  function controlUsername(){
+  
+    var usernameError = document.querySelector("#emptyUsername");
+    if(username.value.length == 0){
+      username.classList.remove("is-valid") ;
+      username.classList.add("is-invalid") ;
+      usernameError.innerHTML="Kullanıcı adı boş bırakılamaz" ;
+      return false ;
+    }else if(!spacePatt.test(username.value)){
+      username.classList.remove("is-valid") ;
+      username.classList.add("is-invalid") ;
+      usernameError.innerHTML="Kullanıcı adında boşluk olamaz" ;
+      return false ;
+    }else if(username.value.length < 4){
+      username.classList.remove("is-valid") ;
+      username.classList.add("is-invalid") ;
+      usernameError.innerHTML="Kullanıcı adı 4 karakterden olamaz olamaz" ;
+      return false ;
+    }else{
+      username.classList.remove("is-invalid") ;
+      username.classList.add("is-valid") ;
+      usernameError.innerHTML="" ;
+      return true ;
+    }
+
+  }
+
+
+  function controlEmail(){
+    const epostaVal = /^([a-zA-Z0-9_\-?\.?){3,}@([a-zA-Z]){3,}\.([a-zA-Z]){2,5}$/ ;
+  
+  var emailError = document.querySelector("#emptyEmail");
+  if(spacePatt.test(email.value)){
+    email.classList.add("is-valid") ;
+    email.classList.remove("is-invalid") ;
+    emailError.innerHTML="eposta adında boşluk olamaz" ;
+    return false ;
+  }else if(epostaVal.test(email.value)){
+    email.classList.add("is-valid") ;
+    email.classList.remove("is-invalid") ;
+    emailError.innerHTML="geçersiz e-posta" ;
+    return false ;
+  }else{
+    email.classList.remove("is-invalid") ;
+    email.classList.add("is-valid") ;
+    emailError.innerHTML="" ;
+    return true ;
+  }
+
+}
+
+
+function controlPass(){
+  const passPattern=/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})(?=.*[!@#$%^&*])/;
+  var passError = document.querySelector("#emptyPass");
+  if(!passPattern.test(pass.value) && spacePatt.test(pass.value)){
+    pass.classList.remove("is-valid") ;
+    pass.classList.add("is-invalid") ;
+    passError.innerHTML="geçersiz şifre" ;
+    return false ;
+  }else{
+    pass.classList.remove("is-invalid") ;
+    pass.classList.add("is-valid") ;
+    passError.innerHTML="" ;
+    return true ;
+  }
+
+}
+
+
+
+
+
+  var myForm = document.querySelector("#formDogrulama");
+  myForm.addEventListener('submit',function(e){
+      if(!myForm.checkValidity() || !controlUsername || !controlEmail || !controlPass){
+       
+          e.preventDefault();
+          e.stopPropagation();
+      }
+    
+     
+  
+     
+
+    },false);
+
+})();
+
+
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+

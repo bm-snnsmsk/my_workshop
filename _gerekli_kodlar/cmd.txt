@@ -1,0 +1,26 @@
+dir     // mevcut directory
+pwd    // mevcut directory
+cd desktop
+mkdir deneme  // desktopta deneme isimli klasör oluşturuldu
+
+--------------------------------------------------
+
+vs code terminalden 'select default'dan git bash seçilebilir
+ 
+
+--------------------------------------------------
+cd test2
+clear   // ekranı temizler
+code . // bu klasörü(test2) vscode ile açar
+code klasorAdi // klasorAdi klasörü vscode ile açar
+cd .. // üst dizine çıkar
+
+touch yeniDosya.txt  // ilgili dizinde dosya oluşturma
+mv eskiDosyaIsmi.txt yeniDosyaIsmi.md // isim değiştirme
+rm doysa.txt   // ilgili dosyayı sil
+ls -al  // çalışılan dosyaları listeler
+ls      // ilgili dosya içeriğini görüntüler
+
+###############################################################
+ilgili klasör içindeyken SHIFT + mouse(right_click) // 'PowerShell panceresini burdan aç' seçeneği çıkar  veya
+arama çubuğunda cmd yaz

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS ödev 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="JS_odevler.css">
+</head>
+<body onload="zmn()">
+   <div class="container content">
+    <h1 class="display-1">KODLUYORUZ</h1>
+    <h1>Merhaba, <span id="isim" class="display-2">MİSAFİR</span>! Hoş Geldiniz !</h1>
+    <div class="zamanDis">
+        <span id="saat" class="fs-1 fw-bold"></span> <span class="">:</span> 
+        <span id="dakika" class="fs-1 fw-bold"></span> <span class="">:</span> 
+        <span id="saniye" class="fs-1 fw-bold"></span>
+        <span id="gun" class="fs-1 fw-bold"> </span>
+    </div>
+    <div class="icerik">
+        tarihi itibariyle <b>Kodluyoruz Frontend Web Deveopment Patikası</b>'nın Javascript bölümü 1. ödevini yapmış bulunmaktayım.
+    </div>
+   </div>
+
+
+
+
+
+   <script>
+    
+    let isim  = document.querySelector("#isim") ;
+    let h  = document.querySelector("#saat") ;
+    let m  = document.querySelector("#dakika") ;
+    let s  = document.querySelector("#saniye") ;
+    let g  = document.querySelector("#gun") ;
+    let gunler = ["Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"] ;
+
+   let gelenIsim = prompt("Lütfen ismini giriniz ") ;
+   (gelenIsim != null) ? isim.innerHTML = gelenIsim.toUpperCase() : isim.innerHTML = "MİSAFİR" ;
+
+   let sayac = setInterval(zmn,1000) ;
+   function zmn(){
+    let zaman = new Date();
+    (zaman.getHours() < 10) ? h.innerHTML = "0"+zaman.getHours() : h.innerHTML = zaman.getHours() ;
+    (zaman.getMinutes() < 10) ? m.innerHTML = "0"+zaman.getMinutes() : m.innerHTML = zaman.getMinutes() ;
+    (zaman.getSeconds() < 10 ) ? s.innerHTML = "0"+zaman.getSeconds() : s.innerHTML = zaman.getSeconds() ;
+    g.innerHTML = gunler[zaman.getDay()] ;
+   }
+  
+   </script>
+</body>
+</html>

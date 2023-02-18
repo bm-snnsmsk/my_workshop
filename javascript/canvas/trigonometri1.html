@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daire</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        canvas{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="canvas" width="500" height="300"></canvas>
+
+<script>
+    // degrees = radians * 180 / Math.PI
+window.onload = function(){
+    let cnv = document.querySelector('#canvas') ,
+        ctx = cnv.getContext("2d")  ,
+        w = cnv.width = window.innerWidth ,
+        h = cnv.height = window.innerHeight ;
+
+
+       
+       ctx.translate(w/2, h/2) ;
+       
+
+
+    for(let angle = 0; angle < Math.PI * 2 ; angle+=.1){
+       let x = Math.cos(angle) * 100 ,  // dalganın yatay düzlemdeki genişliği
+           y = Math.sin(angle) * 100 ; // dalganın dikey düzlemdeki yüksekliği
+       ctx.fillRect(x, y, 3, 3) ;
+    }
+
+  
+
+};
+
+</script>
+</body>
+</html>

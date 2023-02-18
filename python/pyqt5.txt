@@ -1,0 +1,37 @@
+############## python çalıştırma #########################
+py main.py 
+##########################################################
+
+################ ui to py ################################
+pyuic5 untitled.ui -o untitled.py    ***
+pyuic5 second_page.ui -o second_page.py
+pyuic5 third_page.ui -o third_page.py
+##########################################################
+
+################ icon convert ############################
+pyrcc5 icon.qrc -o icon_rc.py
+pyrcc5 img/uc.qrc -o uc_rc.py
+pyrcc5 icons/resource.qrc -o resource_rc.py
+pyrcc5 resource.qrc -o resource_rc.py    ***
+##########################################################
+
+################ help codes ##############################
+python manage.py help
+python manage.py runserver
+##########################################################
+
+################ py to icon ##############################
+pyinstaller --onefile main.py  ## arkaplanda consol ekranı mevcut
+pyinstaller --onedir main.py   ## kullanılan kütüphaneleri de yükler, böylelikle program başka bir PC'ye aktartılırken sorunsuz çalışabilsin
+pyinstaller --onefile -w -i mp3.ico main.py   ## veya  ## arkaplanda consol ekranı çıkmaz (-w)
+pyinstaller --onefile --windowed --icon=mp3.ico main.py  
+##########################################################
+
+################  koyu  arkaplan #########################
+pip install qdarkgraystyle
+##########################################################
+
+################  setup #########################
+pip install cx_freeze  ## daha önceden install edilmemişse eğer
+python setup.py bdist_msi  ## setup.py'yi içeren klasör içindeyken
+##########################################################

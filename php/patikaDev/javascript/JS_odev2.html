@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="JS_odevler.css">
+</head>
+<body>
+
+        <!-- header  START -->
+       <div class="container position-relative" style="min-height: 150px ; ">
+     
+        <div id="header" class="row position-relative py-4" style="min-height: 150px ; background-color: #F07F00;">
+            
+            <!-- uyari penceresi  START -->
+            <div class="position-absolute top-0 end-0 bg-light d-none " style="max-width:300px ; height:35px ; opacity:0.8" id="uyariPenceresi">
+                <div class="row">
+                    <div class="col-8" id="message"></div>
+                    <div class="col-4 p-0 " ><button id="uyariKapat" class="float-end border border-0 bg-light"><span id="x" class="">X</span></button></div>
+                </div>
+            </div><!-- uyari penceresi  END -->
+
+            <div class="row">
+                <h class="display-2 text-center" >KODLUYORUZ</h>
+            </div>
+            <div class="row text-center">
+                <h1>Yapılacaklar Listesi</h1>
+            </div>
+
+           <div class="container">
+            <div class="row">
+                <div class="col-6 offset-1 p-0"><input type="text" class="w-100" placeholder="Bugün ne yapacaksın ?" id="task"></div>
+                <div class="col-4 p-0"><button class="w-100" id="listeEkle">Ekle</button></div>
+           </div>
+           </div>
+    </div>
+   <!-- header  END -->
+
+    <!-- listeleme  START -->
+    <div class="container"><!-- container START -->
+        <div class="row" > <!-- row START -->
+
+            <ul id="yapilacakListesi" class="snnUl">
+
+            </ul>
+        </div><!-- row  END -->
+    </div> <!-- container  END -->
+    <!-- listeleme  END -->
+
+
+<!-- <ul>
+    <li class="snn text-success fs-5 fw-bold">item 1</li>
+    <li class="snn text-success fs-5 fw-bold">item 2</li>
+    <li class="snn text-success fs-5 fw-bold">item 3</li>
+    <li class="snn text-success fs-5 fw-bold">item 4</li>
+    <li class="snn text-success fs-5 fw-bold">item 5</li>
+</ul>
+ -->
+
+  <script>
+ 
+      
+      let yapilacakListesi = document.querySelector("#yapilacakListesi") ;
+        let gorev = document.querySelector("#task") ;
+        let kapat = document.querySelector("#uyariKapat") ;
+        let ekle = document.querySelector("#listeEkle") ;
+        let listele = document.querySelector("#listele") ;
+        let uyariPenceresi = document.querySelector("#uyariPenceresi") ;
+        let message = document.querySelector("#message") ;
+        let x = document.querySelector("#x") ;
+        let listeyiKaldir = document.querySelectorAll(".row") ;
+
+        /*** uyari penceresini kapatma1 START ***/
+        kapat.addEventListener("click",function(){
+            uyariPenceresi.classList.add("d-none") ;
+            task.focus() ;
+        });
+        /*** uyari penceresini kapatma1 END ***/
+
+        /*** uyari penceresini kapatma2 START ***/
+        gorev.addEventListener("input",function(){
+         uyariPenceresi.classList.add("d-none") ;
+         task.focus() ;
+        });
+        /*** uyari penceresini kapatma2 END ***/
+
+
+        
+        /*** liste ekleme START ***/
+
+       
+        ekle.addEventListener("click",function(){
+            if(task.value.trim() == ""){
+                uyariPenceresi.classList.remove("d-none") ;
+                uyariPenceresi.classList.add("d-block") ;
+                message.innerHTML = "Boş değer girdiniz ! " ;
+                task.focus() ;
+            }else{
+                yapilacakListesi.innerHTML += `<li class="snn">${task.value}</li>`          
+                 ;
+                task.value = "" ;
+                task.focus() ;
+            }
+            
+            
+                /*** liste elemanı kaldır START ***/       
+                let sinan = document.querySelectorAll(".snn");
+                    for(let i = 0 ; i < sinan.length ; i++ ){
+                    sinan[i].addEventListener("click", function(){
+                    this.style.display = "none";
+                   // alert("deneme ") ;
+                    }) ;
+                } 
+                /*** liste elemanı kaldır END ***/
+               
+      
+        });
+        /*** liste ekleme END ***/
+      
+
+        
+</script>
+
+</body>
+</html>
+

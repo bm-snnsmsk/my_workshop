@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+           
+
+        }
+     
+    </style>
+    
+</head>
+<body>
+ <div class="container">
+    <canvas id="canvas" width="600" height="400"></canvas>     
+    <button onclick="updateGame()" id="devam" style="display: none;">Devam</button>
+    
+ </div>
+
+ <div class="container">
+    <p id="demo"></p>
+   
+    
+ </div>
+
+ <p id="demo2"></p>
+
+
+
+<script>
+
+
+    let devamBtn = document.querySelector('#devam');
+    let output = document.querySelector('#demo');
+    let output2 = document.querySelector('#demo2');
+    let canvas = document.querySelector('#canvas');
+    let ctx = canvas.getContext('2d');
+    let canvasW = canvas.width  ;
+    let canvasH = canvas.height ;
+
+    let score = 0 ;
+    let showResetBtn = false ;
+    let showStartBtn = true ;
+    let isAnimation ;
+
+    let dino = {
+        dinoX : 0,
+        dinoY : canvasH-50,
+        dinoW : 30,
+        dinoH : 50,
+        dinoColor : "rgba(132, 255, 45)",
+        drawdino : function(){
+            ctx.beginPath();
+            ctx.fillStyle= this.dinoColor ;
+            ctx.fillRect(this.dinoX,this.dinoY,this.dinoW,this.dinoH) ;
+        }
+    }
+    let enemy = {
+        enemyX : canvasW-30,
+        enemyY : canvasH-30,
+        enemyW : 30,
+        enemyH : 30,
+        enemyColor : "rgba(246, 98,89)",
+        enemyRadius : 30,
+        createEnemy : function(){
+                ctx.beginPath();
+                ctx.fillStyle= this.enemyColor;
+                ctx.fillRect(this.enemyX,this.enemyY,this.enemyW,this.enemyH) ;
+        }
+    }
+    let gameOver = {
+        drawGameOver : function (){
+            ctx.fillStyle="white" ;
+            ctx.font="30px Arial, sans-serif";
+            ctx.textAlign="center" ;
+            ctx.textBaseline = "middle" ;
+            ctx.fillText('Oyun Bitti. Puanınız : '+score,canvasW/2, 50) ;
+            cancelAnimationFrame(isAnimation) ;
+           // showResetBtn = true;
+           // resetButton.resetBtnDraw() ;
+           devamBtn.style.display = "block" ;
+        }
+    }
+        
+    // baslat butonu START
+    let startButton = {
+        startBtnX:canvasW/2 - 50,
+        startBtnY:canvasH/2 - 25,
+        startBtnW:100,
+        startBtnH:50,
+        startBtnDraw: function(){
+            ctx.strokeStyle ="white",
+            ctx.lineWidth = "2";
+            ctx.strokeRect(this.startBtnX, this.startBtnY,this.startBtnW,this.startBtnH);
+            ctx.font="18px Arial, sans-serif";
+            ctx.textAlign="center" ; // // horizontal yönde yazıyı tam ortalar
+            ctx.textBaseline = "middle" ; // veertical yönde yazıyı tam ortalar
+            ctx.fillStyle="white";
+            ctx.fillText("Başlat",canvasW/2,canvasH/2);
+        }
+    }
+    // başlat butonu END
+
+    // reset butonu START
+    let resetButton = {
+        resetBtnX:canvasW/2 - 75,
+        resetBtnY:canvasH/2 - 25,
+        resetBtnW:150,
+        resetBtnH:50,
+        resetBtnDraw: function(){
+            ctx.strokeStyle ="white",
+            ctx.lineWidth = "2";
+            ctx.strokeRect(this.resetBtnX, this.resetBtnY,this.resetBtnW,this.resetBtnH);
+            ctx.font="18px Arial, sans-serif";
+            ctx.textAlign="center" ;
+            ctx.textBaseline = "middle" ;
+            ctx.fillStyle="white";
+            ctx.fillText("Yeniden Başlat",canvasW/2,canvasH/2);
+        }
+    }
+    // reset butonu END
+
+    
+    canvas.addEventListener('mousedown', clickedButton, true);
+   /*  canvas.addEventListener('mousemove', function(e){
+        output2.innerHTML = "<br/>x: "+e.clientX+"  y : "+e.clientY ;
+    }); */
+    document.body.addEventListener('keyup',function(){
+        dino.dinoY = 350 ;
+    }); 
+    document.body.addEventListener('keydown' , function(e){        
+        let tus = e.keyCode ;       
+        dino.dinoY = 320 ;      
+    }) ;
+
+        
+    // clickedButton fonksiyonu START
+    function clickedButton(e){    
+        // mouse pozisyonunu yakala
+        let mouseX = e.clientX;
+        let mouseY = e.clientY;           
+        
+        if(showResetBtn == true){
+            if(mouseX >= resetButton.resetBtnX && mouseX <= resetButton.resetBtnX + resetButton.resetBtnW && mouseY >= resetButton.resetBtnY && mouseY <= resetButton.resetBtnY + resetButton.resetBtnH){
+            updateGame() ;
+            output.innerHTML += "<br/>reset tıklanıyor" ;   
+            showResetBtn = false ;         
+        }
+        }
+    
+        if(showStartBtn == true){
+            if(mouseX >= startButton.startBtnX && mouseX <= startButton.startBtnX+startButton.startBtnW && mouseY >= startButton.startBtnY && mouseY <= startButton.startBtnY+startButton.startBtnH){
+        startButton = {} ; // başlat fonksiyonunu sil 
+        showStartBtn == false ;      
+        }
+        }
+    }
+    // clickedButton fonksiyonu END
+
+        
+    function drawCanvas(){
+        ctx.beginPath();
+        ctx.fillStyle="rgba(24,198,233)";
+        ctx.fillRect(0,0,canvasW,canvasH) ;
+
+        /////////// TEST /////////
+        ctx.beginPath() ;
+        ctx.fillStyle="yellow" ;
+        ctx.arc(canvasW/2, canvasH/2,4, 0,Math.PI*2) ;
+        ctx.fill() ;
+        /////////// TEST /////////
+    }
+
+    function scoreBoard(){
+        ctx.beginPath() ;
+        ctx.fillStyle = "rgba(255, 255, 255)" ;
+        ctx.font = "25px Arial sans-serif" ;
+        ctx.fillText(score, 20, 30) ;
+    }
+
+    function isAlive(){
+        if(enemy.enemyX < dino.dinoW && dino.dinoY + dino.dinoH > enemy.enemyY){
+            return false ;
+        }else{
+            return true ;
+        }
+    }
+
+    function attack(){
+        if(isAlive()){   
+            if(enemy.enemyX + enemy.enemyW < 0){
+                enemy.enemyX = canvasW ;
+                score++ ;
+            }
+            enemy.enemyX -= 3 ;
+        }else{
+            score = 0 ;
+            gameOver.drawGameOver() ;        
+            canvas.style.cursor = "pointer" ;  
+        }
+    }
+
+    updateGame() ;
+    function updateGame(){
+        drawCanvas() ;
+        scoreBoard() ;
+        dino.drawdino() ; 
+        enemy.createEnemy() ;
+        attack() ;
+        
+
+        isAnimation = requestAnimationFrame(updateGame) ;
+    }
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

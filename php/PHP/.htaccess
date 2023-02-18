@@ -1,0 +1,2 @@
+# RewriteEngine On
+# Redirect / http://www.youtube.com [NC,L]

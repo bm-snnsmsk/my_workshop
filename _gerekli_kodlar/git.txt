@@ -1,0 +1,88 @@
+pwd    // mevcut dizin
+
+********************************************************
+git --help  // git komutları listeler
+********************************************************
+
+clear    // cmd ekranını temizler
+git init // başlangıç, projenin ilk defa initialize olması için
+git add // ekleme
+git commit // onaylama  // -m "açıklama" kısmı yazılmazsa gidilen pencerede en üsste açıklama yazılsa ve en altta  :x! den sonra enter'lense gene commitlenmiş olur
+git status // proje durumu değişimler falan
+git push // uzak pc/ sunucu/ githup ' a gönderme
+git pull // uzak pc'den çekme
+git clone // proje kopyası alma 
+git checkout // proje içindeki branch'lara geçiş yapma
+git rm // remove silme
+
+**********************************
+dosya git bash here ile açılır
+
+git config --list   // ayarlar 
+/////////proje git ekenirken ilk ve bir kez yapılması gereken ayarlar///////////////
+açılan cmd 'de git init ile dosya initialize edilir
+
+git config --global user.email "bm.snnsmsk@gmail.com"  // bir kez tanımlaır
+git config --global user.name "sinan şimşek"
+////////////////////////////////////
+
+ 
+git add index.html          // takibe al  (stage area)
+git add .                   // tüm dosyaları takibe al (stage area) 
+git add*                    // tüm dosyaları takibe al (stage area)
+git add -A.                 // tüm dosyaları takibe al (stage area)
+git rm --cashed index.html  // ilgili dosya takipten çıkartılır
+git status                  // ile içindeki dosyalar açılır
+git status -s               // durumun short gösterimi
+git diff                    // yapılan değişiklikleri gösterir
+git diff HEAD               // Çalışma dizini ile repository (HEAD) arasındaki farklılıkları görmek için
+git diff <commit_id_1>..<commit_id_2>    // İki commit arasındaki farklılıkları görmek için
+git diff --staged           // Çalışma dizini ve staged ortamı arasındaki farkları görmek için
+git commit -m "MyFirst Commit Aciklama"
+git commit --amend          // açıklama satırına mecbur kalınmadan commitlemeyi sağlar
+git commit --amend -m "amend ile bir önceki commit'in açıklama satırını değiştirme"
+git log                     // commit geçmişi  // git log ekranından çıkmak için, ! tuşu artı enter veya q ile de çıkış yapılabilir
+git log --oneline                     // tüm commitler ama tek satır 
+git log -n 2                // sondan 2 commit'i getir veya sondan kaç tane commit listelenmek isteniyorsa o kdar rakam yazılır  
+git log --since=30minutes   //minutes, hours, days, weeks
+git branch                  // mevcut branch'leri listeler
+git branch -a               // tüm branchlari listeleme
+git branch branch_name      // branch ekleme
+git branch -d branch_name   // branch silme
+git checkout branch_name    // Mevcutta var olan branch'a geçiş yapmak için
+git checkout -b branch_name // Yeni bir branch oluşturup, bu branch'a geçiş yapmak için
+git checkout <commit_ID>    // Commitler arası geçiş yapmak için
+git merge branch_name       // Başka bir branch'da olan değişiklikleri, bulunduğumuz branch ile birleştirmek istediğimizde kullanılır.
+git merge --squash branch_name   // Başka bir branch'da olan değişiklikleri, bulunduğumuz branch ile birleştirir  ve commit etme fırsatı verir. Diğer durumda tüm logları gösterir burda ise commit sonrası logları da birleştirir
+git merge --abort           // conflict(farklı branch'lerin yaptıkları çalışmaların çaku-ısması durumunda hangi merge'in geçerli olacağına biz karar vermeliyiz) durumunda merge öncesi duruma geri döner
+git rebase brach_name       // merge gibi AMA FARKI ...
+git clone <remote_URL>      // Mevcut bir Remote Repository'de bulunan dosyaların bilgisayarımızda bir kopyasının oluşturulmasını sağlar.
+git push origin master      // Projemizde aldığımız commit'leri, remote repository'e gönderir.
+git remote add origin http://uzak_deponun_adresi.git     // Henüz remote repository’niz yoksa aşağıdaki komut ile local deponuzu uzak sunucudaki depoya bağlayabilirsiniz
+git revert 700ff1e8c935f6dc6e16aa8016eef6c69d7038e8   // ilgili commitID'li commit geri alınır
+git revert revertCommitID // revert'in revert'i yapılabilir
+git reset --soft commitID // hangi commit'e gidlmek isteniyorsa o commitID ye kadar tüm commitleri geri alır. geri dönüşü var
+git reset --mixed commitID // hangi commit'e gidlmek isteniyorsa o commitID ye kadar tüm commitleri geri alır. çalışma alanında 
+git reset --hard commitID // hangi commit'e gidlmek isteniyorsa o commitID ye kadar tüm commitleri geri alır. AMA tehlikeli dikkatli kullanılmalı. geri dönüşü yok
+git reset --hard HEAD~1 // hangi commit'e gidlmek isteniyorsa o sayı'ya kadar tüm commitleri ergi alır. AMA tehlikeli dikkatli kullanılmalı (localde silinir)
+git push origin +master // (uzak sunucuda da silinir)
+git stash                 // geçici olarak saklama ama commt'lenmez [son commit'ten bu yana yapılan değişikleri saklar ihtiyacımız olduğunda kullanabiliriz]
+git stash list            // stash işlemi listelenir
+git stash clear           // stash işlemi silinir
+git stash apply stash@{0} // stash işlemi uygulanır  [stash@{0} = stashID]
+
+
+
+*******************************************
+**********vscode terminal******************
+git --version
+
+
+
+********************************************
+*************vscode ************************
+proje ilk defa git ile ilişkilendirilecekse Initialize Repository ile git init işlemi yapılmış olur
+... butonundan push, pull clone ve daha fazlası yapılabilir
+geri alma, add, commit, toplu commit bu ve daha fazlası araç çubuğundan yapılabiliyor
+M -> modified 
+

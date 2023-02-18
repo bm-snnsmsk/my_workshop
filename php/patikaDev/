@@ -1,0 +1,128 @@
+[33mcommit df79e4df064d403a612fb8ad0ac3fd6c740e4525[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Sinan Şimşek <bm.snnsmsk@gmail.com>
+Date:   Sun Jul 17 23:33:07 2022 +0300
+
+    master 1 | readme.md eklendi
+
+[33mcommit 5771e00c134a45d6d40db36ac39710c3f74f8fbc[m
+Author: Sinan Şimşek <bm.snnsmsk@gmail.com>
+Date:   Sun Jul 17 20:05:09 2022 +0300
+
+    readme eklendi
+
+[33mcommit 3bafb764fe2f34fc071e47de381bf8e422e8f86b[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Sinan Şimşek <bm.snnsmsk@gmail.com>
+Date:   Sun Jul 17 20:03:33 2022 +0300
+
+    son güncelleme
+
+[33mcommit 0170a615e8e4431a6dd44325cc661c632dfa0e03[m
+Author: Sinan Şimşek <bm.snnsmsk@gmail.com>
+Date:   Wed Jul 13 22:21:13 2022 +0300
+
+    'Asian Kitchen's Menu isimli' javascript 3. ödevi eklendi.
+
+[33mcommit 2d389f4cd2b07ec74d25cdad1ac314ea4bc40f22[m
+Author: Sinan Şimşek <bm.snnsmsk@gmail.com>
+Date:   Sun Jul 10 22:12:49 2022 +0300
+
+    Javascript TODO LIST ödevi eklendi
+
+[33mcommit 55c30b0b61995ca06a49eb3689d415dc701d812a[m
+Author: Sinan Şimşek <bm.snnsmsk@gmail.com>
+Date:   Sun Jul 3 22:53:47 2022 +0300
+
+    Javascript ödev-1 yüklendi.
+
+[33mcommit 767c96ac6e02674daa8bf373b20166c8e12e2505[m
+Author: Sinan Şimşek <bm.snnsmsk@gmail.com>
+Date:   Thu Jun 30 00:58:31 2022 +0300
+
+    linkedin clone ödevi kabaca bitirildi ve eklendi.
+
+[33mcommit 2d34a8d33ad613afd83321ac58160f6240ae90d0[m
+Author: Sinan Şimşek <bm.snnsmsk@gmail.com>
+Date:   Sun Jun 26 21:58:31 2022 +0300
+
+    medium clone ödevi eklendi
+
+[33mcommit c5b38cbeabb71a15059f44809551bef396484ba8[m
+Author: Sinan Şimşek <bm.snnsmsk@gmail.com>
+Date:   Thu Jun 23 00:59:51 2022 +0300
+
+    instagram clone ödevi eklendi.
+
+[33mcommit 59c85f3d015457e3ffa6d511e455eddacbc3868f[m
+Author: Sinan Şimşek <bm.snnsmsk@gmail.com>
+Date:   Tue Jun 21 23:29:48 2022 +0300
+
+    yeni örnekler eklendi..
+
+[33mcommit 3abe8c02913fd2faa414115ddaa4e3f032277fc5[m
+Author: Sinan Şimşek <bm.snnsmsk@gmail.com>
+Date:   Tue Jun 21 00:09:35 2022 +0300
+
+    display, offset örnekleri eklendi..
+
+[33mcommit c1c985441ba0fbc256dddcc1eecc9d366f82a6ab[m
+Author: Sinan Şimşek <bm.snnsmsk@gmail.com>
+Date:   Mon Jun 20 21:36:00 2022 +0300
+
+    Sayfa Güncellendi...
+
+[33mcommit 3c4fc6e86013988c8ae5d030ac784e02c6c62486[m
+Author: Sinan Şimşek <bm.snnsmsk@gmail.com>
+Date:   Sat Jun 18 01:36:40 2022 +0300
+
+    bootstrap_web_calismasi'nda Previous >> Önceki ve Next >> Sonraki
+
+[33mcommit 04cf0ff388c27d4fc5a4f96a7397d54b26018c6f[m
+Merge: de6e977 87f4960
+Author: Sinan Şimşek <bm.snnsmsk@gmail.com>
+Date:   Sat Jun 18 01:31:13 2022 +0300
+
+    Merge branch 'main' of https://github.com/bm-snnsmsk/devPatika
+
+[33mcommit de6e977bfe554966d1dc7740c4b0f64b2b0af95a[m
+Author: Sinan Şimşek <bm.snnsmsk@gmail.com>
+Date:   Sat Jun 18 01:23:07 2022 +0300
+
+    veri_yapilari_ve_algoritmalar klasörü düzenlendi .
+
+[33mcommit 87f4960180a7921ee930fcb2720494d1067f6809[m
+Author: Sinan Şimşek <100801415+bm-snnsmsk@users.noreply.github.com>
+Date:   Fri Jun 17 23:32:49 2022 +0300
+
+    README.md oluşturuldu
+
+[33mcommit ab964cad5b707b1217182c8dcae48b8b3adf3776[m
+Author: Sinan Şimşek <100801415+bm-snnsmsk@users.noreply.github.com>
+Date:   Fri Jun 17 23:31:40 2022 +0300
+
+    README.md oluşturuldu
+
+[33mcommit f994d52a42782a1fce63282677a79558d0deb709[m
+Author: Sinan Şimşek <100801415+bm-snnsmsk@users.noreply.github.com>
+Date:   Fri Jun 17 23:29:56 2022 +0300
+
+    README.md oluşturuldu
+
+[33mcommit 9af8403a59ca0fdb947b187bb0ec93230c9155ae[m
+Author: Sinan Şimşek <100801415+bm-snnsmsk@users.noreply.github.com>
+Date:   Fri Jun 17 23:27:39 2022 +0300
+
+    README.md oluşturuldu
+
+[33mcommit ee408e8109b4023b1be2903f29f8cc528add3b36[m
+Author: Sinan Şimşek <100801415+bm-snnsmsk@users.noreply.github.com>
+Date:   Fri Jun 17 23:26:14 2022 +0300
+
+    README.md
+    
+    README.md oluşturuldu
+
+[33mcommit b9c4125172c5bdc22f4f13829f0d4ff9fb0cc050[m
+Author: Sinan Şimşek <bm.snnsmsk@gmail.com>
+Date:   Fri Jun 17 23:14:41 2022 +0300
+
+    initial commit

@@ -1,0 +1,43 @@
+:root {
+    --beyaz: #f5f5f5;
+    --siyah: #121212;
+    --kirmizi: #ff3422;
+    --sari: #ffe922;
+    --gri: #636363;
+    --border: 2px solid var(--kirmizi);
+}
+
+body {
+    background-color: black;
+}
+
+h1 {
+    color: var(--beyaz);
+}
+
+nav {
+    width: 1000px;
+    height: 50px;
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: yellow;
+    padding: 12px 14px;
+    border: 2px solid yellow;
+    margin: 12px;
+}
+
+nav ul li a:hover {
+    color: #ff7a59;
+    border: 1px solid #ff7a59;
+    background: #fff;
+}

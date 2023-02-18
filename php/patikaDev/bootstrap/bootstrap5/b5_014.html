@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bazı Araçlar -1</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+ 
+
+  <div class="container-fluid border mb-4">
+    <h3>float-start & float-none & clearfix</h3>
+    <div class="clearfix"><span class="float-start bg-warning p-2">float-start</span>
+      <span class="float-end float-xl-start bg-danger p-2">float-end float-xl-start</span>
+    </div>
+    <span class="float-none bg-danger p-2">float-none(öncekilere .clearfix classı tanımlanmalı aksi takdirde herşey karışır)</span>
+  </div>
+
+  <div class="container-fluid border mb-4">
+    <h3>user-select-all</h3>
+    <div class="row">
+      <div class="col-md-6">
+        <p class="user-select-auto">user-select-auto(default)</p>
+        <p class="user-select-all">user-select-all</p>
+        <p class="user-select-none">user-select-none</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid border mb-4">
+    <h3>pe-none</h3>
+    <div class="row">
+      <div class="col-md-6">
+       <p> <a href="#" class="pe-auto">pe-auto(default)</a> Tıklanabilir link</p>
+        <p><a href="#" class="pe-none" tabindex="-1" aria-disabled="true">pe-none</a> Tıklanamaz link. Ayrıca (tabindex="-1") tab tuşuyla seçilemesin diye. (aria-disabled="true") ekran okuyucuların bu linkin tıklanamaz olduğunda dair meaj vermesi için</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid border mb-4">
+    <h3>opacity</h3>
+    <div class="row">
+      <div class="col-md-6 d-flex">
+        
+        <div class="opacity-100 bg-danger" style="width:6rem; height:5rem" >opacity-100</div>
+        <div class="opacity-75 bg-danger" style="width:6rem; height:5rem" >opacity-75</div>
+        <div class="opacity-50 bg-danger" style="width:6rem; height:5rem" >opacity-50</div>
+        <div class="opacity-25 bg-danger" style="width:6rem; height:5rem" >opacity-25</div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid border mb-4">
+    <h3>shadow-none & shadow & shadow-sm & shadow-lg</h3>
+    <div class="row">
+      <div class="col-12">
+        
+        <div class="shadow-none p-2 mb-3 bg-light">shadow-none shadow-none shadow-none shadow-none shadow-none shadow-none shadow-none shadow-none shadow-none shadow-none shadow-none shadow-none shadow-none shadow-none shadow-none shadow-none shadow-none shadow-none shadow-none shadow-none shadow-none shadow-none shadow-none shadow-none shadow-none</div>
+        <div class="shadow-sm p-2 mb-3 bg-light">
+          shadow-sm shadow-sm shadow-sm shadow-sm shadow-sm
+          shadow-sm shadow-sm shadow-sm shadow-sm shadow-sm
+          shadow-sm shadow-sm shadow-sm shadow-sm shadow-sm
+          shadow-sm shadow-sm shadow-sm shadow-sm shadow-sm
+          shadow-sm shadow-sm shadow-sm shadow-sm shadow-sm
+
+        </div>
+        <div class="shadow p-2 mb-3 bg-light">
+          shadow shadow shadow shadow shadow shadow
+          shadow shadow shadow shadow shadow shadow
+          shadow shadow shadow shadow shadow shadow
+          shadow shadow shadow shadow shadow shadow
+          shadow shadow shadow shadow shadow shadow
+        </div>
+        <div class="shadow-lg p-2 mb-3 bg-light">
+          shadow-lg shadow-lg shadow-lg shadow-lg shadow-lg
+          shadow-lg shadow-lg shadow-lg shadow-lg shadow-lg
+          shadow-lg shadow-lg shadow-lg shadow-lg shadow-lg
+          shadow-lg shadow-lg shadow-lg shadow-lg shadow-lg
+          shadow-lg shadow-lg shadow-lg shadow-lg shadow-lg
+        </div>
+       
+
+      </div>
+    </div>
+  </div>
+
+
+
+  
+  
+  <div class="container-fluid border mb-4">
+    <h3>visible & invisible</h3>
+    <div class="row">
+      <div class="col-md-12 d-flex">
+        
+        <div class="visible col-md-3 bg-info" style="width: 7rem; height: 11rem;">
+          div 1, visible(default)
+        </div>
+        <div class="invisible col-md-3 bg-info" style="width: 7rem; height: 11rem;">
+          div 2, invisible
+        </div>
+        <div class="visible col-md-3 bg-info" style="width: 7rem; height: 11rem;">
+          div 3, visible(default) <br><br>
+          div 2,  d-none olsaydı arada boşluk olmayacaktı
+        </div>
+   
+        
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid border mb-4">
+    <h3>visually-hidden (Gözleri iyi görmeyenler için ekran koruyucu kullanılmışsa, sadece orada aktif olması istendiğinde kullanılır)</h3>
+    <div class="row">
+      <div class="col-md-12 d-flex">
+        
+        <div class="" style="width: 7rem; height: 11rem;">
+        <span class="visually-hidden"> Ekran koruyucu kariç beni kimse okuyamaz</span> Ekran koruyucu haricinde görünen kısım 
+        </div>
+        
+   
+        
+
+      </div>
+    </div>
+  </div>
+
+
+
+  
+  <div class="container-fluid border mb-4">
+    <h3>shadow-none & shadow-sm & shadow & shadow-lg</h3>
+    <div class="row">
+      <div class="col-md-12 d-flex">
+        
+        <div class="overflow-visible col-md-3 bg-info" style="height: 6rem;">
+          overflow-visible(default)  overflow-visible(default)  overflow-visible(default)  overflow-visible(default)  overflow-visible(default)  overflow-visible(default)  overflow-visible(default)  overflow-visible(default)  overflow-visible(default)  overflow-visible(default)  overflow-visible(default)  overflow-visible(default)  overflow-visible(default)
+        </div>
+        <div class="overflow-auto col-md-3 bg-light" style="height: 6rem;">
+          overflow-auto overflow-auto overflow-auto overflow-autooverflow-auto overflow-autooverflow-auto overflow-autooverflow-auto overflow-auto overflow-auto overflow-auto overflow-auto overflow-auto overflow-auto overflow-auto overflow-auto overflow-auto overflow-auto overflow-auto overflow-auto overflow-auto overflow-auto overflow-auto overflow-auto overflow-auto
+        </div>
+        <div class="overflow-hidden col-md-3 bg-success" style="height: 6rem;">
+          overflow-hidden overflow-hidden overflow-hidden overflow-hidden overflow-hidden overflow-hidden overflow-hidden overflow-hidden overflow-hidden overflow-hidden overflow-hidden overflow-hidden overflow-hidden overflow-hidden overflow-hidden overflow-hidden overflow-hidden overflow-hidden overflow-hidden overflow-hidden overflow-hidden overflow-hidden overflow-hidden overflow-hidden 
+        </div>
+        <div class="overflow-scroll col-md-3 bg-warning" style="height: 6rem;">
+          overflow-scroll overflow-scroll overflow-scroll overflow-scroll overflow-scroll overflow-scroll overflow-scroll overflow-scroll overflow-scrolloverflow-scrolloverflow-scroll  overflow-scroll overflow-scroll overflow-scroll overflow-scroll overflow-scroll overflow-scroll overflow-scroll overflow-scroll overflow-scrolloverflow-scrolloverflow-scrolloverflow-scrolloverflow-scroll
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+    <script src="javascript/bootstrap.bundle.min.js"></script>
+    <script src="javascript/bootstrap.bundle.min.js.map"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+dosya -> view(görünüm) -> gizli öğeler

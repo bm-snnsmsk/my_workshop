@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox 4</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+ 
+
+    <div class="container-fluid border my-2 p-3">
+      <h2> flex-fill</h2>
+        <div class="d-flex bg-dark p-3 text-white mb-3">
+          <div class="p-2 flex-fill bg-info">flex-fill 1</div>
+          <div class="p-2 flex-fill bg-danger">flex-fill 2</div>
+          <div class="p-2 flex-fill bg-primary">flex-fill 3</div>      
+        </div>
+
+        <h2> flex-fill</h2>
+        <div class="d-flex bg-dark p-3 text-white mb-3">
+          <div class="p-2 bg-info">flex-fill yok 1</div>
+          <div class="p-2 bg-danger">flex-fill yok 2</div>
+          <div class="p-2 bg-primary">flex-fill yok 3</div>      
+        </div>
+    
+        <h2> flex-fill</h2>
+        <div class="d-flex bg-dark p-3 text-white mb-3">
+          <div class="p-2 flex-fill bg-info">flex-fill 1</div>
+          <div class="p-2 bg-danger">flex-fill yok 2</div>
+          <div class="p-2 flex-fill bg-primary">flex-fill 3</div>      
+        </div>
+
+         
+        <h2> flex-fill</h2>
+        <div class="d-flex bg-dark p-3 text-white mb-3">
+          <div class="p-2 flex-lg-fill bg-info">flex-lg-fill 1</div>
+          <div class="p-2 flex-lg-fill bg-danger">flex-lg-fill yok 2</div>
+          <div class="p-2 flex-lg-fill bg-primary">flex-lg-fill 3</div>      
+        </div>
+
+    </div>
+
+ 
+
+    <div class="container-fluid border my-2 p-3">
+      <h2> flex-grow(div içeriklerinden arta kalan boşluğu hangi div(ler) kullansın)</h2>
+        <div class="d-flex bg-dark p-3 text-white mb-3">
+          <div class="p-2 flex-grow-1 bg-info">flex-grow-1</div>
+          <div class="p-2 flex-lg-grow-1 bg-danger">flex-lg-grow-1</div>
+          <div class="p-2 bg-primary">flex-grow-0(varsayılan)</div>      
+        </div>
+
+        <h2> flex-fill</h2>
+        <div class="d-flex bg-dark p-3 text-white mb-3">
+          <div class="p-2 bg-info">flex-fill yok 1</div>
+          <div class="p-2 bg-danger">flex-fill yok 2</div>
+          <div class="p-2 bg-primary">flex-fill yok 3</div>      
+        </div>
+        
+
+    </div>
+  
+       
+    <div class="container-fluid border my-2 p-3">
+      <h2> flex-shrink(div içeriği alta kaymasını kaldırma)</h2>
+        <div class="d-flex bg-dark p-3 text-white mb-3">
+          <div class="p-2 bg-info">flex-shrink-1(varsayılan)</div>
+          <div class="p-2 flex-lg-shrink-0 bg-danger">flex-lg-shrink-0 flex-lg-shrink-0 
+            flex-lg-shrink-0 flex-lg-shrink-0
+            flex-lg-shrink-0 flex-lg-shrink-0
+            flex-lg-shrink-0 flex-lg-shrink-0 flex-lg-shrink-0 flex-lg-shrink-0  flex-lg-shrink-0</div>
+          <div class="p-2 flex-shrink-0 bg-primary">flex-shrink-0 flex-shrink-0 flex-shrink-0 flex-shrink-0 flex-shrink-0 flex-shrink-0 flex-shrink-0 flex-shrink-0 flex-shrink-0 flex-shrink-0 flex-shrink-0 flex-shrink-0</div>      
+        </div>
+
+  
+        
+
+    </div>
+
+    
+
+ 
+  
+             
+    <div class="container-fluid border my-2 p-3">
+      <h2> me-auto(sağa göre itekleme) & ms-auto(sola göre itekleme)</h2>
+        <div class="d-flex bg-dark p-3 text-white mb-3">
+          <div class="p-2 me-auto bg-info">me-auto</div>
+          <div class="p-2 bg-danger">içerik 2</div>
+          <div class="p-2 bg-primary">içerik 3</div>      
+        </div>
+
+  
+        <div class="d-flex bg-dark p-3 text-white mb-3">
+          <div class="p-2 bg-info">içerik 1</div>
+          <div class="p-2 bg-danger">içerik 2</div>
+          <div class="p-2 ms-auto bg-primary">ms-auto</div>      
+        </div>
+
+    </div>
+
+
+    <div class="container-fluid border my-2 p-3">
+      <h2> order-n</h2>
+        <div class="d-flex bg-dark p-3 text-white mb-3">
+          <div class="p-2 order-3 bg-info">içerik 1 order-3</div>
+          <div class="p-2 order-1 bg-danger">içerik 2 order-1 </div>
+          <div class="p-2 order-5 bg-primary">içerik 3 order-5</div>  
+          <div class="p-2 order-2 bg-success">içerik 4 order-2 </div>
+          <div class="p-2 order-4 bg-secondary">içerik 5 order-4</div>     
+        </div>
+
+    </div>
+
+    <div class="container-fluid border my-2 p-3">
+      <h2> flex-wrap(varsayılan değer)(içerikler satır sığmadığında alta geçerler)</h2>
+        <div class="d-flex flex-wrap bg-primary p-3 text-white mb-3">
+          <div class="p-2 border border-3 border-dark">flex içerik 1</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 2</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 3</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 4</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 5</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 6</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 7</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 8</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 9</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 10</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 11</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 12</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 13</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 14</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 15</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 16</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 17</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 18</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 19</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 20</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 21</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 22</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 23</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 24</div>
+        </div>
+
+        <h2> flex-wrap-reverse(tersten dizer)</h2>
+        <div class="d-flex flex-wrap-reverse bg-primary p-3 text-white mb-3">
+          <div class="p-2 border border-3 border-dark">flex içerik 1</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 2</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 3</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 4</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 5</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 6</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 7</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 8</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 9</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 10</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 11</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 12</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 13</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 14</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 15</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 16</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 17</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 18</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 19</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 20</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 21</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 22</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 23</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 24</div>
+        </div>
+
+        <h2> flex-nowrap(tersten dizer)</h2>
+        <div class="d-flex flex-nowrap bg-primary p-3 text-dark mb-3">
+          <div class="p-2 border border-3 border-dark">flex içerik 1</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 2</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 3</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 4</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 5</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 6</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 7</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 8</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 9</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 10</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 11</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 12</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 13</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 14</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 15</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 16</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 17</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 18</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 19</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 20</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 21</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 22</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 23</div>
+          <div class="p-2 border border-3 border-dark">flex içerik 24</div>
+        </div>
+
+
+    </div>
+   
+   
+
+
+    
+   
+    
+  
+  
+    
+   
+   
+  
+  
+   
+    
+  
+
+
+
+
+
+
+
+
+
+    <script src="javascript/bootstrap.bundle.min.js"></script>
+    <script src="javascript/bootstrap.bundle.min.js.map"></script>
+</body>
+</html>

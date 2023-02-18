@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToolTip</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+ 
+
+  
+  <div class="container-fluid my-5">
+    <div class="row border border-dark p-5">
+      <div class="col">
+
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+          Tooltip on top
+        </button>
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
+          Tooltip on right
+        </button>
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">
+          Tooltip on bottom
+        </button>
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
+          Tooltip on left
+        </button>
+
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
+          Tooltip with HTML
+        </button>
+
+        <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Tıklnamaz tooltip">
+          <button class="btn btn-primary" type="button" disabled>Tıklanamaz button</button>
+        </span>
+       
+</div>
+    </div>
+  </div>
+
+
+
+
+    <script src="javascript/main.js"></script>
+    <script src="javascript/bootstrap.bundle.min.js"></script>
+    <script src="javascript/bootstrap.bundle.min.js.map"></script>
+
+    <script>
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]')) ;
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl,{
+    delay:{"show":10, "hide":5}, // bunlar yazılmasa element içerisinde yazılan delay geçelri
+    html:true, // bunlar yazılmasa element içerisinde yazılan html durumu geçelri
+    placement:"bottom" , // bunlar yazılmasa element içerisinde yazılan placement geçelri
+    title:"default " , // bunlar yazılmasa element içerisinde yazılan placement geçelri
+    trigger:"focus click", // focuclanınca veya tıklanınca üzerine gelince mi tıklanınca mı // default hover focus
+    offset:[0,40] // [x,y]
+  })
+}) ;
+    </script>
+
+</body>
+</html>

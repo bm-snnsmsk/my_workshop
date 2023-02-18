@@ -1,0 +1,179 @@
+Options -Indexes
+RewriteEngine on
+## eğer dosya varsa dosyayı çalıştır 
+# RewriteCond %{REQUEST_FILENAME} !-f
+## eğer gelen istek bir dosya değilse bu RewriteRule çalışacak 
+## buraya ne gelirse gelsin route parametresi olarak al
+# RewriteRule ^(.*)$ index.php?route=$1 [QSA]
+
+
+######### 1- ilgili klasor içeriğini yasaklar ama klasor/name.ext şeklinde mevcut dosya yazılırsa gene erişilebilir #########
+# Options -Indexes  
+
+######### 2- hem ilgili klasor içeriğini yasaklar ve  klasor/name.ext şeklinde mevcut dosya yazılırsa bile erişimi yasaklar #########
+# deny from all  
+# deny from 124.23.0.1 ilgili IP'yi yasaklar
+
+
+######### 3- varsayılan index.php sayfası ayarlama  #########
+######### örnekte şu sekilde verilmişti DirectoryIndex /selam.php  #########
+# DirectoryIndex selam.php 
+
+######### 4- şu ip adresinden erişime izin verilmek istenirse  #########
+# allow from 95.70.244.113
+
+######### 5- herhangi bir sayfaya erişim yasaklanma istense  #########
+# <Files 'iletisim.php'> 
+# deny from all 
+######### ama şu ip adresinden erişime izin verilmek istenirse  #########
+# allow from 95.70.244.113  
+# </Files>
+
+######### 5- yetkilendirme  #########
+#########   kullanıcı adı : snnsmsk 
+#########   şifre         : 123
+######### snnsmsk:123 şeklinde .htpasswd içinde tutulmalı
+# AuthType Basic
+# AuthName "Restricted Content" 
+######   örnekte başına / konulmuştu  /C:/xampp/htdocs/myworkspace/patikaDev/php/HTACCESS/.htpasswd
+# AuthUserFile /home/sifirda1/public_html/.htpasswd
+# require valid-user
+
+
+
+
+######### 6- 404 hata sayfasına yönlendirme  #########
+######### 7- 401 hata sayfasına yönlendirme (yetkili giriş hatası) #########
+
+ErrorDocument 403 http://localhost/MyTemplate/403.html
+ErrorDocument 404 http://localhost/MyTemplate/404.html
+ErrorDocument 408 http://localhost/MyTemplate/408.html
+ErrorDocument 500 http://localhost/MyTemplate/500.html
+
+
+
+
+######### 8- Rewrite #########
+# RewriteEngine On
+# RewriteRule ^(selam)$ selam.php
+# RewriteRule ^(iletisim)$ iletisim.php
+# RewriteRule ^(index)$ index.php
+# RewriteRule ^('en|tr')?/?([a-z0-9/-]+)$ index.php?dil=$1&route=$2
+
+######### 9- www'suz yönlendirme #########
+# RewriteEngine On
+# RewriteCond %{HTTP-HOST} ^siteadi.com$ [NC, OR]
+##### ayrıca şu
+# RewriteCond %{HTTP-HOST} ^www.siteadi.com$ [NC]
+# RewriteRule ^(.*)$ http://siteadi.com/$1 [L,R=301,NC]
+
+######### 9- siteniz  www'suz olursa  www'lu olana yönlendir #########
+#RewriteCond %{HTTP_HOST} ^sifirdanphp.site [NC]
+#RewriteRule ^(.*)$ http://www.sifirdanphp.site/$1 [L,R=301,NC]
+
+######### 10- https yönlendirme #########
+# RewriteEngine On
+# RewriteCond %{SERVER_PORT} !=443
+# RewriteRule ^ https://siteadi.com%{REQUEST_URI} [R,NC,L]
+
+######### 10- https yönlendirme #########
+#RewriteCond %{HTTPS} !on
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+######### 10- https yönlendirme #########
+# RewriteEngine On
+# RewriteCond %{SERVER_PORT} !=443
+# RewriteRule ^ https://siteadi.com%{REQUEST_URI} [R,NC,L]
+
+######### 11 - yeni siteye yönlendirme #########
+# Redirect / http://www.yenisite.com [NC,L]
+
+######### 12 - upload klaorüne çalıştırılabilir dosyanın yüklenmesini yasaklamak #########
+#Options -Indexes
+#AddHandler cgi-script .php .php2 .php3 .php4. php5 .php6 .php7 .php8 .pl .py .js .jsp .asp .htm .html .shtml .sh .cgi
+#Options -ExecCGI
+
+
+######### 13 - zaten .htaccess e ulaşmak imkansız olmalı sunucu bunu engeller ama gene ne olur ne olmaz #########
+#RewriteRule ^(php\.ini|\.htaccess) - [NC, F] 
+
+
+######### 14 - IP yasaklamak #########
+# deny from 124.23.0.1
+
+
+######## 15 - .php 'sayfaya yönlenmek ########
+#RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !-f 
+#RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+######## 16 - index.php 'i main yapmak ########
+#RewriteRule ^main index.php [NC, L]
+#RewriteRule ^notfound 404.html [NC,L]
+
+
+
+######## 17 - .php 'i kullanmadan sayfalara giriş yapmak ########
+#RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !-f 
+#RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+
+
+######## 18 - index.php 'i main yapmak ########
+#index.php tamamını gizlemek
+# RewriteCond %{THE_REQUEST} ^.*/index.php
+# RewriteRule ^(.*)index.php$ http://localhost/apps/PHP/$1 [R=301,L]
+
+####### 19 -  klasor içine erişimi yasaklar
+# IndexIgnore *
+
+
+####### 20 - hotlink belirttiğimiz içeriğin başka sitelerde kullanımını yasaklama ########
+#RewriteCond %{HTTP_REFERER} !^$
+#RewriteCond %{HTTP_REFERER} !^http://(www\.)sifirdanphp.site/.*$ [NC]
+#RewriteRule \.(gif|jpg|jpeg|png|bmp|zip|rar|mp3|mp4|xml|php|css|pdf)$ - [F]
+
+
+####### 21 -  Zararlı botları sitenize girişini yasaklama
+#RewriteCond %{HTTP_USER_AGENT} ^BlackWidow [OR]
+#RewriteCond %{HTTP_USER_AGENT} ^Bot mailto:craftbot@yahoo.com [OR]
+#RewriteCond %{HTTP_USER_AGENT} ^ChinaClaw [OR]
+#RewriteCond %{HTTP_USER_AGENT} ^Custo [OR]
+#RewriteCond %{HTTP_USER_AGENT} ^DISCo [OR]
+#RewriteCond %{HTTP_USER_AGENT} ^Download Demon [OR]
+#RewriteCond %{HTTP_USER_AGENT} ^eCatch
+#RewriteRule .* - [F]
+
+
+
+####### 22 -  htaccess dosyası ve php ini dosyasının güvenliğini alma girişleri yasaklama
+#RewriteRule ^(php\.ini|\.htaccess) - [NC, F]
+
+
+
+####### 23 -  bir iki örnek
+# RewriteRule ^article/([0-9a-zA-Z-_]+)$ index.php?article=$1 [QSA,NC,L]
+# RewriteRule ^article/([0-9a-zA-Z-_]+)/([0-9]+)/([0-9a-zA-Z-_]+)$ index.php?article=$1&ID=$2&name=$3 [NC,L]
+
+
+#################################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

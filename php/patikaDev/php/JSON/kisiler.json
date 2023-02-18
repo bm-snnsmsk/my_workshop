@@ -1,0 +1,22 @@
+[
+    {
+        "isim" : "sinan",
+        "soyisim" :"şimşek",
+        "yas":37
+    },
+    {
+        "isim" : "emine",
+        "soyisim" :"şimşek",
+        "yas":25
+    },
+    {
+        "isim" : "tuba nur",
+        "soyisim" :"şimşek",
+        "yas":6
+    },
+    {
+        "isim" : "baran",
+        "soyisim" :"şimşek",
+        "yas":2
+    }
+]

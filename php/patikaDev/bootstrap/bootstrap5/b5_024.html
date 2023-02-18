@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button group</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+ 
+
+ 
+
+  <div class="container-fluid my-5">
+    <div class="row">
+      <div class="col-12 ">
+   
+        <div class="btn-group" role="group" aria-label="ayarlar"><!-- role="group" aria-label="ayarlar" ayarları ekran okuyucuları içindir -->
+            <button type="button" class="btn btn-success">btn-group</button> 
+            <button type="button" class="btn btn-success">Ayar Orta</button> 
+            <button type="button" class="btn btn-success">Ayar Sağ</button> 
+        </div>     
+
+      </div>
+    </div>
+
+
+    <div class="col-12 my-4">
+   
+      <div class="btn-group-vertical" role="group" aria-label="ayarlar"><!-- role="group" aria-label="ayarlar" ayarları ekran okuyucuları içindir -->
+          <button type="button" class="btn btn-success">btn-group-vertical</button> 
+          <button type="button" class="btn btn-success">Ayar Orta</button> 
+          <button type="button" class="btn btn-success">Ayar Sağ</button> 
+      </div>     
+
+    </div>
+  </div>
+
+
+    <div class="row mt-4">
+      <div class="col-12 ">
+   
+        <div class="btn-group" role="group" aria-label="ayarlar"><!-- role="group" aria-label="ayarlar" ayarları ekran okuyucuları içindir  aria-current="page" -->
+           <a href="#" class="btn btn-info active" aria-current="page">active link</a>
+           <a href="#" class="btn btn-info">link orta</a>
+           <a href="#" class="btn btn-info">link sağ</a>
+        </div>    
+
+      </div>
+    </div>
+
+
+    
+    <div class="row mt-4">
+      <div class="col-12 ">
+   
+        <div class="btn-group" role="group" aria-label="ayarlar"><!-- role="group" aria-label="ayarlar" ayarları ekran okuyucuları içindir  aria-current="page" -->
+           <input type="checkbox" class="btn-check" id="cbx1" autocomplete="off" >
+           <label for="cbx1" class="btn btn-outline-danger" >btn-check</label>
+           <input type="checkbox" class="btn-check" id="cbx2" autocomplete="off" checked >
+           <label for="cbx2" class="btn btn-outline-danger" >checked</label>
+           <input type="checkbox" class="btn-check" id="cbx3" autocomplete="off" >
+           <label for="cbx3" class="btn btn-outline-danger" >btn-check</label>
+        </div>    
+
+      </div>
+    </div>
+
+
+    <div class="row mt-4">
+      <div class="col-12 ">
+   
+        <div class="btn-group" role="group" aria-label="radiobutton"><!-- role="group" aria-label="ayarlar" ayarları ekran okuyucuları içindir  aria-current="page" -->
+           <input type="radio" class="btn-check" id="rd1" autocomplete="off" name="bsRadio">
+           <label for="rd1" class="btn btn-outline-danger" >btn-check</label>
+           <input type="radio" class="btn-check" id="rd2" autocomplete="off" checked name="bsRadio">
+           <label for="rd2" class="btn btn-outline-danger" >checked</label>
+           <input type="radio" class="btn-check" id="rd3" autocomplete="off" name="bsRadio">
+           <label for="rd3" class="btn btn-outline-danger" >btn-check</label>
+        </div>    
+
+      </div>
+    </div>
+
+
+
+    <div class="row mt-4">
+      <div class="col-12 ">
+   
+        <div class="btn-toolbar" role="group" aria-label="toolbar">
+          <div class="btn-group me-2" role="group" aria-label="ilk grup">
+            <button type="button" class="btn btn-success">1</button>
+            <button type="button" class="btn btn-success">2</button>
+            <button type="button" class="btn btn-success">3</button>
+          </div>  
+          <div class="btn-group me-2" role="group" aria-label="ikinci grup">
+            <button type="button" class="btn btn-warning">4</button>
+            <button type="button" class="btn btn-warning">5</button>
+            <button type="button" class="btn btn-warning">6</button>
+            <button type="button" class="btn btn-warning">7</button>
+          </div>  
+          <div class="btn-group me-2" role="group" aria-label="üçüncü grup">
+            <button type="button" class="btn btn-danger">8</button>
+          </div>  
+        </div>    
+
+      </div>
+    </div>
+
+
+
+    
+    <div class="row mt-4">
+      <div class="col-12 ">
+   
+          <div class="btn-group btn-group-sm me-2" role="group" aria-label="ilk grup">
+            <button type="button" class="btn btn-success">btn-group-sm</button>
+            <button type="button" class="btn btn-success">2</button>
+            <button type="button" class="btn btn-success">3</button>
+          </div>  
+          <div class="btn-group me-2" role="group" aria-label="ikinci grup">
+            <button type="button" class="btn btn-warning">default</button>
+            <button type="button" class="btn btn-warning">5</button>
+            <button type="button" class="btn btn-warning">6</button>
+            <button type="button" class="btn btn-warning">7</button>
+          </div>  
+          <div class="btn-group btn-group-lg me-2" role="group" aria-label="üçüncü grup">
+            <button type="button" class="btn btn-danger">btn-group-lg</button>
+          </div>  
+        </div>    
+
+      </div>
+    </div>
+
+
+    
+    
+    <div class="row mt-4">
+      <div class="col-12 ">
+   
+          <div class="btn-group me-2" role="group" aria-label="açılır menu grup">
+            <button type="button" class="btn btn-success">1</button>
+            <button type="button" class="btn btn-success">2</button>
+            <button type="button" class="btn btn-success">3</button>
+     
+            <div class="btn-group" role="group">
+              <button type="button" id="mybtn" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Açılır button</button>
+              <ul class="dropdown-menu" aria-labelledby="mybtn">
+                <li><a href="#" class="dropdown-item">Menu1</a></li>
+                <li><a href="#" class="dropdown-item">Menu2</a></li>
+                <li><a href="#" class="dropdown-item">Menu3</a></li>
+              </ul>
+       
+          </div>  
+        </div>    
+
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+
+
+
+    <script src="javascript/main.js"></script>
+    <script src="javascript/bootstrap.bundle.min.js"></script>
+    <script src="javascript/bootstrap.bundle.min.js.map"></script>
+</body>
+</html>

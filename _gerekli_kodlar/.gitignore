@@ -1,0 +1,24 @@
+# takip edilmemesi gerekenler
+# ide vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# img
+*.jpg
+*.png
+logo.jpg
+images/
+
+# videos
+*.mp4
+
+#packages
+
+#log
+*.log
+
+# others
+password.txt

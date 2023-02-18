@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trex</title>
+    <style>
+       *{
+        padding: 0;
+        margin: 0;
+       }
+        #canvas{
+            margin:0px 200px;
+            background-color: rgb(251, 177, 79);
+        }
+    </style>
+</head>
+<body>
+
+    <canvas width="500" height="200" id="canvas">
+    </canvas>
+  
+
+
+
+
+<script>
+    let cnv = document.getElementById("canvas") ;
+    let c = cnv.getContext("2d") ;
+
+    let x = 0 ;
+    let y = 0 ;
+    let isGame = true ;
+ /*    while(isGame){
+        x = x - 2;
+        c.fillStyle = "blue" ;        
+        c.clearRect(x,y,20,20);
+        c.fillRect(x,y,20,20) ;
+        if(x <= 20){
+            isGame = false ;
+            alert("Game Over !")
+        }
+    } */
+    
+    while(isGame){
+        if( x <= 0 && y <= 0){
+            x = x + 5 ;
+            y = y + 5 ;
+        }else if(x <= 0 && y >= 200){
+            y = y - 2 ;
+            x = x + 5 ;
+        }else if(x >= 500 && y <= 0){
+            x = x - 5 ;
+            y = y + 5 ;
+        }else if(x >= 500 && y >= 200){
+            x = x - 5 ;
+            y = y - 5 ;
+        }       
+        c.fillStyle = "blue" ; 
+        c.clearRect(x,y,500,200) ; 
+        c.fillRect(x,y,20,20) ;
+    }
+
+ /*    setInterval(()=>{
+        if( x <= 0 && y <= 0){
+            x = x + 5 ;
+            y = y + 5 ;
+        }else if(x <= 0 && y >= 200){
+            y = y - 2 ;
+            x = x + 5 ;
+        }else if(x >= 500 && y <= 0){
+            x = x - 5 ;
+            y = y + 5 ;
+        }else if(x >= 500 && y >= 200){
+            x = x - 5 ;
+            y = y - 5 ;
+        }
+       
+        c.fillStyle = "blue" ; 
+        c.clearRect(x,y,500,200) ; 
+        c.fillRect(x,y,20,20) ;
+      
+    },10); */
+    c.fillStyle = "red" ;
+    c.fillRect(0,150,20,50) ;
+    
+    
+    
+
+</script>
+</body>
+</html>

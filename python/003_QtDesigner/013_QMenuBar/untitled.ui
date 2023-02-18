@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton_test">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>230</y>
+      <width>331</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Kaydet</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menurenkler">
+    <property name="title">
+     <string>renkler</string>
+    </property>
+    <addaction name="actionyellow"/>
+    <addaction name="actionblack"/>
+    <addaction name="actionwhite"/>
+    <addaction name="actionred"/>
+   </widget>
+   <addaction name="menurenkler"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionyellow">
+   <property name="icon">
+    <iconset resource="icons/yellow.qrc">
+     <normaloff>:/icons/yellow.ico</normaloff>:/icons/yellow.ico</iconset>
+   </property>
+   <property name="text">
+    <string>yellow</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+Y</string>
+   </property>
+  </action>
+  <action name="actionblack">
+   <property name="icon">
+    <iconset resource="icons/black.qrc">
+     <normaloff>:/icons/black.ico</normaloff>:/icons/black.ico</iconset>
+   </property>
+   <property name="text">
+    <string>black</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+B</string>
+   </property>
+  </action>
+  <action name="actionwhite">
+   <property name="icon">
+    <iconset resource="icons/white.qrc">
+     <normaloff>:/icons/white.ico</normaloff>:/icons/white.ico</iconset>
+   </property>
+   <property name="text">
+    <string>white</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+W</string>
+   </property>
+  </action>
+  <action name="actionred">
+   <property name="icon">
+    <iconset resource="icons/red.qrc">
+     <normaloff>:/icons/red.ico</normaloff>:/icons/red.ico</iconset>
+   </property>
+   <property name="text">
+    <string>red</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+R</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="icons/black.qrc"/>
+  <include location="icons/yellow.qrc"/>
+  <include location="icons/white.qrc"/>
+  <include location="icons/red.qrc"/>
+  <include location="icons/green.qrc"/>
+  <include location="icons/blue.qrc"/>
+ </resources>
+ <connections/>
+</ui>
