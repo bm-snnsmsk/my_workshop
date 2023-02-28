@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QMainWindow, QApplication, QMessageBox
+from PyQt5.QtWidgets import QMainWindow, QApplication, QMessageBox, QSizeGrip, QVBoxLayout
 import sys
 from pencere import Ui_MainWindow
 
@@ -16,9 +16,14 @@ class Window(QMainWindow):
 
         self.setWindowFlag(Qt.FramelessWindowHint) ## pencerenin tüm dış çerçevesni kaldırmak için -- 222 ama görev çubuğundan kapatılabilir
 
-       
-    
-        
+
+
+
+        ## çerçevesiz pnecerenin ölçülerini değişrimek ama uygulayamadım !!!!
+        vbox = QVBoxLayout()
+        sizegrip = QSizeGrip(self)
+        vbox.addWidget(sizegrip)
+        self.setLayout(vbox)
 
        
         

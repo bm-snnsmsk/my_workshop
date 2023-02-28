@@ -1,7 +1,7 @@
 import sys
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication, QMainWindow, QToolTip
-from PyQt5.QtGui import QIcon
+from PyQt5 import QtGui
 
 
 def window() :
@@ -11,7 +11,7 @@ def window() :
     win = QMainWindow()
     win.setWindowTitle("ilk form uygulamam")
     win.setGeometry(0, 0, 500, 500)
-    win.setWindowIcon(QIcon('icon.jpg'))
+    win.setWindowIcon(QtGui.QIcon('icon.jpg'))
     win.setToolTip("ilk masaüstü uygulamam")
 
     win.show()

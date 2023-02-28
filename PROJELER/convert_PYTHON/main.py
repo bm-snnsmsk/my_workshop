@@ -67,7 +67,9 @@ class MainWindow(QMainWindow) :
             self.file_path = os.path.dirname(filepath)
             self.ui_to_py_ui_file_extension_name = os.path.splitext(filepath)
             self.ui.lineEdit_ui_to_py_file_path.setText(self.ui_to_py_ui_file_name)
+            self.ui.lineEdit_ui_to_py_file_name.setText(self.ui_to_py_ui_file_name[0:-3]+".py")
             self.is_file_path = True
+
 
     def convert_ui_to_py(self) :
         if self.is_file_path == True :

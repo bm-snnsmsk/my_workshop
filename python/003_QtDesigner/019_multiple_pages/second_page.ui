@@ -35,7 +35,7 @@
     </widget>
    </item>
    <item row="1" column="0">
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="pushButton_second_go_home_pge">
      <property name="font">
       <font>
        <pointsize>16</pointsize>

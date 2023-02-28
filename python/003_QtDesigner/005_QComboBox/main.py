@@ -30,7 +30,7 @@ class Window(QtWidgets.QMainWindow):
         self.ui.cbox_hayvanlar.addItem(QIcon(":/img/red.ico"),"şahin", 101)
         self.ui.cbox_hayvanlar.addItem(QIcon(":/img/blue.ico"),"papağan", 102)
         self.ui.cbox_hayvanlar.addItem("güvercin", 103)
-        self.ui.cbox_hayvanlar.currentIndexChanged.connect(self.fff)
+        self.ui.cbox_hayvanlar.currentIndexChanged.connect(self.fff)  # = currentTextChanged
 
  
         

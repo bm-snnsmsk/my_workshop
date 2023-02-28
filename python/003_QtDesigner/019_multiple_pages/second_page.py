@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'second_page.ui'
+# Form implementation generated from reading ui file 'C:/Users/bm_snnsmsk/Desktop/my_workspace/python/003_QtDesigner/019_multiple_pages/second_page.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -27,12 +27,12 @@ class Ui_Form(object):
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
         self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
-        self.pushButton = QtWidgets.QPushButton(Form)
+        self.pushButton_second_go_home_pge = QtWidgets.QPushButton(Form)
         font = QtGui.QFont()
         font.setPointSize(16)
-        self.pushButton.setFont(font)
-        self.pushButton.setObjectName("pushButton")
-        self.gridLayout.addWidget(self.pushButton, 1, 0, 1, 1)
+        self.pushButton_second_go_home_pge.setFont(font)
+        self.pushButton_second_go_home_pge.setObjectName("pushButton_second_go_home_pge")
+        self.gridLayout.addWidget(self.pushButton_second_go_home_pge, 1, 0, 1, 1)
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Preferred)
         self.gridLayout.addItem(spacerItem, 2, 0, 1, 1)
 
@@ -43,4 +43,4 @@ class Ui_Form(object):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "2. Pencere"))
         self.label.setText(_translate("Form", "2. Pencere"))
-        self.pushButton.setText(_translate("Form", "Ana Pencereye Dön"))
+        self.pushButton_second_go_home_pge.setText(_translate("Form", "Ana Pencereye Dön"))

@@ -67,7 +67,9 @@ class MainWindow(QMainWindow) :
             self.file_path = os.path.dirname(filepath)
             self.ui_to_py_ui_file_extension_name = os.path.splitext(filepath)
             self.ui.lineEdit_ui_to_py_file_path.setText(self.ui_to_py_ui_file_name)
+            self.ui.lineEdit_ui_to_py_file_name.setText(self.ui_to_py_ui_file_name[0:-3]+".py")
             self.is_file_path = True
+
 
     def convert_ui_to_py(self) :
         if self.is_file_path == True :
@@ -163,7 +165,7 @@ class MainWindow(QMainWindow) :
             try :
                 py_file_path = self.py_to_exe_folder_path + "/" + self.py_to_exe_py_file_name
                 img_file_path = self.file_path + "/" + self.py_to_exe_icon_file_name
-                ###  "pyinstaller --onefile -w -i convert.png main.py"           
+                ###  "pyinstaller --onefile -w -i converter.png main.py"           
                 cmd_code = f"pyinstaller --onefile -w -i {img_file_path} {py_file_path}"
                 subprocess.getoutput(cmd_code)
                 QMessageBox.information(self, "Converter Mesajı", f"{self.self.py_to_exe_py_file_name} dosyası, .exe dosyasına başarılı bir şekilde dönüştürülmüştür.")

@@ -1,0 +1,22 @@
+<RCC>
+  <qresource prefix="img">
+    <file>img/logout.ico</file>
+    <file>img/list_users.ico</file>
+    <file>img/refresh.ico</file>
+    <file>img/add_user.ico</file>
+    <file>img/admin.ico</file>
+    <file>img/books.ico</file>
+    <file>img/books_2.ico</file>
+    <file>img/category.ico</file>
+    <file>img/category_add.ico</file>
+    <file>img/category_edit.ico</file>
+    <file>img/database.ico</file>
+    <file>img/edit.ico</file>
+    <file>img/erkek_avatar.png</file>
+    <file>img/home.ico</file>
+    <file>img/kadin_avatar.png</file>
+    <file>img/library.ico</file>
+    <file>img/settings.ico</file>
+    <file>img/user_settings.ico</file>
+  </qresource>
+</RCC>

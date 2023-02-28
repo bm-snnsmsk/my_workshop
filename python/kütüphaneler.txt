@@ -1,0 +1,25 @@
+## PyQt5 => multiform window, unix, mac
+PyPDF2
+from PyQt5.QtWidgets import QLabel, QGroupBox, QHBoxLayout, QApplication, QMainWindow, QPushButton, QDialog
+from PyQt5.QtGui import QIcon   # wid.setIcon(QIcon("icon.ico"))
+from PyQt5.QtCore import QSize  # wid.setIconSize(QSize(40,40))
+from PyQt5.QtGui import QFont   # wid.setFont("Sanserif", 20)
+from PyQt5.QtGui import QPixmap # lbl.setPixmap(QPixmap("football.png"))
+
+-------------------------------------------------------
+-----------------------LAYOUT--------------------------
+hboxlay = QHBoxLayout()
+hboxlay.addWidget(wid_1)
+hboxlay.addWidget(wid_2)
+win.setLayout(hboxlay)
+
+gridlay = QGridLayout()
+gridlay.addWidget(wid_1, 0, 0) ## row, column
+gridlay.addWidget(wid_2, 0, 1)
+win.setLayout(gridlay)
+-------------------------------------------------------
+
+-------------------------------------------------------
+-----------------------setstylesheet-------------------
+wid.setStyleSheet("color:red")
+-------------------------------------------------------

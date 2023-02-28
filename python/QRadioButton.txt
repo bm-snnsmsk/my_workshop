@@ -1,0 +1,15 @@
+from PyQt5.QtWidgets import QRadioButton
+
+rbtn = QRadioButton("football")
+rtbn.setChecked(True)
+rtbn.setIcon(QIcon("football.png"))
+rtbn.setIconSize(QSize(40, 40))
+rtbn.setFont(QFont("Sanserif", 14))
+
+rbtn_1.toggled.connect(self.onRadioBtn)
+rbtn_2.toggled.connect(self.onRadioBtn)
+
+def onRadioBtn() :
+	btn = self.sender()
+		if btn.isChecked():
+			......

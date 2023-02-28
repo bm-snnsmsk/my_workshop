@@ -1,0 +1,15 @@
+self.btngroup = QButtonGroup()
+self.btngroup.buttonClicked[int].connect(self.on_button_clicked)
+
+btn_1 = QPushButton("python")
+btn_2 = QPushButton("c++")
+btn_3 = QPushButton("java")
+
+self.btngroup.addButton(btn_1, 1)
+self.btngroup.addButton(btn_2, 2)
+self.btngroup.addButton(btn_3, 3)
+
+def on_button_clicked(self, id) :  
+  for btn in self.btngroup.buttons() :
+    if btn is self.btngroup.button(id) :
+      self.lbl.setText(btn.text() + " tıklandı")

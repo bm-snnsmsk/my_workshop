@@ -17,6 +17,7 @@ class Window(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
 
         self.ui.pushButton_setText.setText("Durdur")
+        self.ui.pushButton_setText.setWhatsThis("bu bir setWhatsThis örneğidir") # çalışması için bu butona odaklandıkatan sonra shift + F1 basılması lazıum
 
         self.ui.pushButton_icon.setIcon(QIcon(":/icons/start.ico"))
         self.ui.pushButton_icon.setIconSize(QSize(80, 80))

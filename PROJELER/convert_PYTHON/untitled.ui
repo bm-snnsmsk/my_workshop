@@ -44,22 +44,7 @@
            </widget>
           </item>
           <item row="1" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_2">
-            <item>
-             <widget class="QLineEdit" name="lineEdit_ui_to_py_file_name">
-              <property name="text">
-               <string>untitled.py</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_ui_to_py_file_name">
-            <property name="text">
-             <string>Python Dosya Adı</string>
-            </property>
-           </widget>
+           <layout class="QHBoxLayout" name="horizontalLayout_2"/>
           </item>
           <item row="2" column="1">
            <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -79,6 +64,20 @@
            <widget class="QLabel" name="label_ui_to_py_file_path">
             <property name="text">
              <string>Design(.ui) Dosya Yolu</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_ui_to_py_file_name">
+            <property name="text">
+             <string>Python Dosya Adı</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="lineEdit_ui_to_py_file_name">
+            <property name="text">
+             <string>untitled.py</string>
             </property>
            </widget>
           </item>

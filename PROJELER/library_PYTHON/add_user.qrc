@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="img">
+    <file>img/add_user.ico</file>
+  </qresource>
+</RCC>

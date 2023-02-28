@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'third_page.ui'
+# Form implementation generated from reading ui file 'C:/Users/bm_snnsmsk/Desktop/my_workspace/python/003_QtDesigner/019_multiple_pages/third_page.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -29,12 +29,12 @@ class Ui_MainWindow(object):
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
         self.gridLayout.addWidget(self.label, 0, 1, 1, 1)
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_third_go_home_pge = QtWidgets.QPushButton(self.centralwidget)
         font = QtGui.QFont()
         font.setPointSize(16)
-        self.pushButton.setFont(font)
-        self.pushButton.setObjectName("pushButton")
-        self.gridLayout.addWidget(self.pushButton, 1, 1, 1, 1)
+        self.pushButton_third_go_home_pge.setFont(font)
+        self.pushButton_third_go_home_pge.setObjectName("pushButton_third_go_home_pge")
+        self.gridLayout.addWidget(self.pushButton_third_go_home_pge, 1, 1, 1, 1)
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Preferred)
         self.gridLayout.addItem(spacerItem, 2, 1, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
@@ -53,4 +53,4 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "3. Pencere"))
         self.label.setText(_translate("MainWindow", "3. Pencere"))
-        self.pushButton.setText(_translate("MainWindow", "Ana Pencereye Dön"))
+        self.pushButton_third_go_home_pge.setText(_translate("MainWindow", "Ana Pencereye Dön"))

@@ -4,6 +4,8 @@ py main.py
 
 ################ ui to py ################################
 pyuic5 untitled.ui -o untitled.py    ***
+pyuic5 login.ui -o login.py
+pyuic5 home_page.ui -o home_page.py
 pyuic5 second_page.ui -o second_page.py
 pyuic5 third_page.ui -o third_page.py
 ##########################################################

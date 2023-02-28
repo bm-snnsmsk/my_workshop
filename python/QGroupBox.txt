@@ -1,0 +1,8 @@
+gbox = QGroupBox("başlık")
+gbox.setFont(QFont("Sanserif", 14))
+..
+..
+..
+
+gbox.setLayout(vbox)
+self.setLayout(hbox)
