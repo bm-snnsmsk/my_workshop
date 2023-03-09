@@ -21,19 +21,19 @@ class MainForm(QMainWindow) :
         viewmenu = mainmenu.addMenu("Edit")
         helpmenu = mainmenu.addMenu("Help")
 
-        copyaction = QAction(QIcon(":/blue.ico"), "Copy", self)
+        copyaction = QAction(QIcon("../images/icons/ok.ico"), "Copy", self)
         copyaction.setShortcut("Ctrl + C")
         filemenu.addAction(copyaction)
 
-        cutaction = QAction(QIcon(":/icons/icon.png"), "Cut", self)
+        cutaction = QAction(QIcon("../images/icons/red.ico"), "Cut", self)
         cutaction.setShortcut("Ctrl + X")
         filemenu.addAction(cutaction)
 
-        saveaction = QAction(QIcon("./images/icons/blue.ico"), "Save", self)
+        saveaction = QAction(QIcon("../images/icons/blue.ico"), "Save", self)
         saveaction.setShortcut("Ctrl + S")
         filemenu.addAction(saveaction)
 
-        exitaction = QAction(QIcon("close.ico"), "Exit", self)
+        exitaction = QAction(QIcon("../images/icons/close.ico"), "Exit", self)
         exitaction.setShortcut("Ctrl + E")
         exitaction.triggered.connect(self.exitWindow)
         editmenu.addAction(exitaction)

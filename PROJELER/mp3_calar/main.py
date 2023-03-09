@@ -19,7 +19,7 @@ class MainWindow(QWidget) :
         self.index = ''
 
         p = self.palette()
-        color = QColor('#77ab9c')
+        color = QColor('#75659c')
         color.setAlpha(200)
         p.setColor(QPalette.Window, QColor(color))
         self.setPalette(p)
@@ -73,6 +73,7 @@ class MainWindow(QWidget) :
         hb2.addWidget(self.slider)
 
         self.songlist = QListWidget()
+        self.songlist.setStyleSheet("background-color:#122323; color:#cccccc; ")
         vb.addWidget(self.songlist)
           
         self.songlist.addItem(str("Burak Yeter - Tuesday ft. Danelle Sandoval.mp3"))
@@ -131,21 +132,28 @@ class MainWindow(QWidget) :
         self.songlist.doubleClicked.connect(self.play_mp3)
         self.skipbackwardbtn.clicked.connect(self.skip_backward)
         self.skipforwardbtn.clicked.connect(self.skip_forward)
-        self.slider_vl.valueChanged.connect(self.set_volume)
+
 
 
     def open_mp3_file(self) :
         file_name = QFileDialog()
         file_name.setFileMode(QFileDialog.ExistingFiles)
-        names = file_name.getOpenFileNames(self,"Müzik Aç", os.getenv('HOME'))
+        names = file_name.getOpenFileNames(self,"Müzik Aç", os.getenv('HOME')) ## liste içeren bir liste döndürür
+
         self.song = names[0]
-        sarki_listesi = []
-        for i in range(0,len(self.song)) :
-            bol = self.song[i].split('/')
-            #print(bol[len(bol) - 1])   
-            sarki_listesi.append(bol[len(bol) - 1])
-        self.songlist.addItems(sarki_listesi)
-        # self.songlist.addItems(self.song)
+        self.songlist.addItems(self.song) ## listWdiget'e şarkı isimlerini path'iyle birlikte ekler
+
+
+        # for i in names :
+        #     print(i)  ## liste içeren bir liste döndürür
+
+        # sarki_listesi = []
+        # for i in range(0,len(self.song)) :
+        #     bol = self.song[i].split('/') 
+        #     print(bol[len(bol) - 1])   
+        #     sarki_listesi.append(bol[len(bol) - 1]) ## şarkının ismini alır path'ini almaz
+        # self.songlist.addItems(sarki_listesi)
+
        
 
     def play_mp3(self) :
@@ -194,10 +202,10 @@ class MainWindow(QWidget) :
             self.playbtn.setIcon(self.style().standardIcon(QStyle.SP_MediaPlay))
 
     def move_forward(self) :
-        self.player.setPosition(int(self.player.position()) + 2000)
+        self.player.setPosition(int(self.player.position()) + 1000)
 
     def move_backward(self) :
-        self.player.setPosition(int(self.player.position()) - 2000)
+        self.player.setPosition(int(self.player.position()) - 1000)
 
     def set_state(self) :
         self.playbtn.setEnabled(True)

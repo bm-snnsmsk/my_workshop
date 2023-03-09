@@ -9,6 +9,19 @@ pyuic5 home_page.ui -o home_page.py
 pyuic5 second_page.ui -o second_page.py
 pyuic5 third_page.ui -o third_page.py
 ##########################################################
+ 
+################ ui to py (main dosyasında otomatik yükleme) ################################
+from PyQt5 import uic
+..
+..
+
+class MainWindow(QMainWindow) :
+  def __init__(self) :
+    super().__init__()
+    uic.loadUi("myfile.ui", self)  ## otomatik renderleme
+    ..
+    ..
+##########################################################
 
 ################ icon convert ############################
 pyrcc5 icon.qrc -o icon_rc.py

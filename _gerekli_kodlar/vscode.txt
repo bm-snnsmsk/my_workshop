@@ -22,6 +22,9 @@ alt + yön // satırı aşarğı veya yukarı taşır
 ctrl + sağ/sol // kelime kelime geçiş yapar
 ctrl + L // mevcut satırı seçer
 
+
+ctrl + shift + p == ayarlara gider
+veya ayarlar sekmesinden 'User Snippets' ile direk snippetlere gidilebilir
 ayarlar > configures snippet > html / js / php ...  (json formatında kısayol koşarı oluşrur)
 çağırma  =  ss1 + tab
 ayarlar da font-family de monospace olmasına dikkat edilmeli her kaarakter aynı boyutta olacaktır . A aynı boyut kaplayacaktır

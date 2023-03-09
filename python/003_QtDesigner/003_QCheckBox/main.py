@@ -24,7 +24,8 @@ class MyApp(QtWidgets.QMainWindow):
         ## change için fonksiyon yazıldı ama içerisi doldurulmadı END
 
         self.ui.btn_hobileri_gonder.clicked.connect(self.hobileri_gonder)
-        self.ui.btn_dilleri_gonder.clicked.connect(self.dilleri_gonder)
+        # self.ui.btn_dilleri_gonder.clicked.connect(self.dilleri_gonder)
+        self.ui.btn_dilleri_gonder.toggled.connect(self.dilleri_gonder) ## toggled = clicked 
 
     def show_state(self, value) :
         # print(value) ## seçili değilse 0, seçili ise 2

@@ -2,6 +2,8 @@ import sys
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication, QMainWindow, QToolTip
 from PyQt5.QtGui import QIcon
+from PyQt5.QtCore import QRect, QSize
+
 
 class MyWindow(QMainWindow) :
     def __init__(self) :
@@ -39,6 +41,17 @@ class MyWindow(QMainWindow) :
         self.btn_save.setText("Kaydet")
         self.btn_save.move(150, 100)
         self.btn_save.clicked.connect(self.tikla)
+
+
+        ###### Son eklemeler START ######################
+        self.btn_yeni = QtWidgets.QPushButton("yeni",self)
+        self.btn_yeni.setIcon(QIcon("green.ico"))
+        self.btn_yeni.setIconSize(QSize(50,50)) ## w,h
+        self.btn_yeni.setGeometry(QRect(150,250,100,75)) ## x,y,w,h
+        ###### Son eklemeler START ######################
+
+
+    
 
     def tikla(self) : 
         print("Merhaba "+ self.txt_name.text() + " " + self.txt_surname.text())

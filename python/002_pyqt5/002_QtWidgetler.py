@@ -4,7 +4,6 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QToolTip
 from PyQt5.QtGui import QIcon
 
 
-
 def window() :
     app = QApplication(sys.argv)
     win = QMainWindow()
@@ -35,9 +34,7 @@ def window() :
     btn_save.move(150, 100)
     btn_save.clicked.connect(tikla)
 
-
-
-    
+   
 
 
     win.show()

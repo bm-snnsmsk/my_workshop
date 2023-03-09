@@ -21,11 +21,12 @@ class MainWindow(QDialog) :
        self.list.insertItem(3,"java")
        self.list.insertItem(4,"rugby")
        self.list.insertItem(5,"kotlin")
+       self.list.setFont(QFont("Rimes New Roman",12))
 
        self.list.clicked.connect(self.listview_clicked)
        
        self.label = QLabel()
-       self.label.setFont(QFont("Sanserif",15))
+       self.label.setFont(QFont("Sanserif",20))
 
        vbox.addWidget(self.label)
        vbox.addWidget(self.list)

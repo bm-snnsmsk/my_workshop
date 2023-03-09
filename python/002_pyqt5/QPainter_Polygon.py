@@ -13,9 +13,7 @@ class MainWindow(QMainWindow) :
     
     def paintEvent(self, e) :  ## hazır fonksiyon
         painter = QPainter(self)
-        painter.setPen(QPen(Qt.black, 5, Qt.SolidLine)) ## kenarlık
-        painter.setBrush(QBrush(Qt.red, Qt.SolidPattern)) ## içini doldurur
-        painter.setBrush(QBrush(Qt.blue, Qt.VerPattern)) ## içini doldurur
+        painter.setPen(QPen(Qt.black, 3, Qt.SolidLine)) ## kenarlık
         painter.setBrush(QBrush(Qt.blue, Qt.HorPattern)) ## içini doldurur
         # point = ([
         #     QPoint(10,10),

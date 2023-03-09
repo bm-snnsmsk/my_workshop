@@ -14,7 +14,7 @@ class MainWindow(QMainWindow) :
     def paintEvent(self, e) :
         painter = QPainter(self)
 
-        painter.drawText(100, 100, "Sinan Şimşek")
+        painter.drawText(100, 100, "Sinan Şimşek") ## x, y, text
 
         rect = QRectF(100,150,250,25)
         painter.drawRect(rect)

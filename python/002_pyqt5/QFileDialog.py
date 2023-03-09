@@ -26,9 +26,11 @@ class MainWindow(QDialog) :
     def browseImage(self) :
         fname = QFileDialog.getOpenFileName(self, "Open File", "c\\" , "Image Files (*.jpg *.gif)")
         imagepath = fname[0]
+        ## label'e görsel ekleme START
         pixmap = QPixmap(imagepath)
         self.label.setPixmap(QPixmap(pixmap))
-        self.resize(pixmap.width(), pixmap.height())
+        self.resize(pixmap.width(), pixmap.height()) ## foto büyük veya küçükse ekran ona göre4
+        ## label'e görsel ekleme END
 
 
 
