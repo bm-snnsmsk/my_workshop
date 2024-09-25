@@ -26,6 +26,7 @@ class Window(QtWidgets.QMainWindow):
     ### 111  QtDesigner da signal tanımlandıktan ve edit kısmından my_slot isimli slot tanımlandıktan sonra hazırladığımız slotun içeriği
     # def my_slot(self, deg) :
     #     self.ui.label_ekran.setText(str(deg))
+          self.ui.proggressBar.setValue(deg)  
 
 
     ## 222 - signal
