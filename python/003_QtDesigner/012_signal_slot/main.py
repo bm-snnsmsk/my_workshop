@@ -30,6 +30,7 @@ class Window(QtWidgets.QMainWindow):
 
 
     ## 222 - signal
+        ## valueChanged[int].connect = signal  -------------------------------------   self.my_slot = slot
         #self.ui.horizontalSlider.valueChanged[int].connect(self.my_slot)
     ## 222 - slot
     # def my_slot(self, val) :
