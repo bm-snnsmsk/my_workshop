@@ -38,9 +38,17 @@ class Window(QtWidgets.QMainWindow):
 
     ## 333 - slot
     # @pyqtSlot(int) ## parametre almıyorsa boş bırakılır
+    # horizontalSlider = nesne adı  örneğin (horizontalSlider_ses)
     # def on_horizontalSlider_valueChanged(self, val) : ## isimlendirme bu formatta olmalı
     #     self.ui.label_ekran.setStyleSheet("font-size:16px")
     #     self.ui.label_ekran.setText("@pyqtSlot - değer : "+str(val))
+
+    ## 1 signal to 1 signal
+        
+    ## 1 signal to 1 slot
+    ## 1 signal to n slot
+    ## n signal to 1 slot
+    ## signal - signal - slot
 
     ## 444 (kulağı tersten tutmaktır) (signal-signal-slot)
     #     self.ui.horizontalSlider.valueChanged[int].connect(self.my_signal[int])
@@ -51,7 +59,7 @@ class Window(QtWidgets.QMainWindow):
 
     ## 555 emit() (signal-slot-emit()-signal-slot)
         self.ui.horizontalSlider.valueChanged[int].connect(self.kaydirici_slot)
-        self.my_signal[int].connect(self.my_slot)
+        self.my_signal[int].connect(self.my_slot)  ## yukarda tanımlanbmış
     def kaydirici_slot(self, val) :
         if val == 50 :            
             self.ui.horizontalSlider.valueChanged[int].disconnect(self.kaydirici_slot)            
