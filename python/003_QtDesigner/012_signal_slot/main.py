@@ -52,17 +52,17 @@ class Window(QtWidgets.QMainWindow):
 
     ## 444 (kulağı tersten tutmaktır) (signal-signal-slot)
     #     self.ui.horizontalSlider.valueChanged[int].connect(self.my_signal[int])
-    #     self.my_signal[int].connect(self.my_slot)
+    #     self.my_signal[int].connect(self.my_slot)   ## my_signal, yukarda(17. satırda) tanımlanbmış
     # def my_slot(self, val) :
     #     self.ui.label_ekran.setText("değer : "+str(val))
 
 
-    ## 555 emit() (signal-slot-emit()-signal-slot)
+    ## 555 emit() (signal-slot-emit()-signal-slot)  ## emit = signal yayınlama
         self.ui.horizontalSlider.valueChanged[int].connect(self.kaydirici_slot)
-        self.my_signal[int].connect(self.my_slot)  ## yukarda(17. satırda) tanımlanbmış
+        self.my_signal[int].connect(self.my_slot)  ## my_signal, yukarda(17. satırda) tanımlanbmış
     def kaydirici_slot(self, val) :
         if val == 50 :            
-            self.ui.horizontalSlider.valueChanged[int].disconnect(self.kaydirici_slot)            
+            self.ui.horizontalSlider.valueChanged[int].disconnect(self.kaydirici_slot)    ## signal'i kesme, iptal etmek, şartın sağlandığı değer yazılır sonra signali keser ve veriyi göndermez  
         self.my_signal.emit(val)
     def my_slot(self, val) :
          self.ui.label_ekran.setText("emit(val) değer : "+str(val))
