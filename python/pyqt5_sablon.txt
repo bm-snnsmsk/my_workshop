@@ -17,13 +17,13 @@ if __name__ == '__main__' :
 	app = QApplication(sys.argv)
 	win = MainWindow() 
 	win.show()
-	sys.exit(app.exec__())
+	sys.exit(app.exec_())
 ############################################
 def app() :
 	app = QApplication(sys.argv)
 	win = MainWindow() 
 	win.show()
-	sys.exit(app.exec__())
+	sys.exit(app.exec_())
 
 app()
 ###########################################
