@@ -16,8 +16,9 @@ class Window(QtWidgets.QMainWindow):
         # self.setWindowIcon(QIcon('icon.png'))
         self.setWindowIcon(QIcon(':/icon2/1.jpg'))
         
-  
 
+        
+        ## widgetlare ikon yerleştirme
         self.ui.pushButton.setIcon(QIcon(":/icon/icon.png"))
         #self.pushButton.setIconSize(QtCore.QSize(64, 64))
 
