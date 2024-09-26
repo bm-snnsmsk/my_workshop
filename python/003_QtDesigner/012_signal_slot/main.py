@@ -59,7 +59,7 @@ class Window(QtWidgets.QMainWindow):
 
     ## 555 emit() (signal-slot-emit()-signal-slot)
         self.ui.horizontalSlider.valueChanged[int].connect(self.kaydirici_slot)
-        self.my_signal[int].connect(self.my_slot)  ## yukarda tanımlanbmış
+        self.my_signal[int].connect(self.my_slot)  ## yukarda(17. satırda) tanımlanbmış
     def kaydirici_slot(self, val) :
         if val == 50 :            
             self.ui.horizontalSlider.valueChanged[int].disconnect(self.kaydirici_slot)            
