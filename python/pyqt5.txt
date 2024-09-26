@@ -35,6 +35,9 @@ python manage.py help
 python manage.py runserver
 ##########################################################
 
+## iconarchieve.com
+## freepik.com
+
 ################ py to icon ##############################
 pyinstaller --onefile main.py  ## arkaplanda consol ekranı mevcut
 pyinstaller --onedir main.py   ## kullanılan kütüphaneleri de yükler, böylelikle program başka bir PC'ye aktartılırken sorunsuz çalışabilsin
