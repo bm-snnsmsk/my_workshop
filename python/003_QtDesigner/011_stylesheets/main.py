@@ -18,7 +18,7 @@ class Window(QtWidgets.QMainWindow):
         ### qtdesignerdan stylesheet tanımlanırken, widget'lerin obje adları 
         ### id olarak kullanılır css'de olduğu gibi
         ### ayrıca layotlara stylesheet tanımlamak için öncelikle sağ-click ile morph-into  seçeneği ile QWidget veya QFrame çevirerek bu widgetlerin özelikleri inherit yapılır
-       
+        ### #cetralwidget {border-image:url(:/icons/arkaplan_image.png)}
         
         
   
